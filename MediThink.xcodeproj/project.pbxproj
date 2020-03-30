@@ -58,16 +58,48 @@
 		7AE01ED024321D5000FDADD4 /* MediThink */ = {
 			isa = PBXGroup;
 			children = (
-				7AE01ED124321D5000FDADD4 /* AppDelegate.swift */,
-				7AE01ED324321D5000FDADD4 /* SceneDelegate.swift */,
-				7AE01ED524321D5000FDADD4 /* ViewController.swift */,
-				7AE01ED724321D5000FDADD4 /* Main.storyboard */,
-				7AE01EDD24321D5100FDADD4 /* Assets.xcassets */,
-				7AE01EDF24321D5100FDADD4 /* LaunchScreen.storyboard */,
-				7AE01EE224321D5100FDADD4 /* Info.plist */,
-				7AE01EDA24321D5000FDADD4 /* MediThink.xcdatamodeld */,
+				7AE01EEB24321DDE00FDADD4 /* SupportingFiles */,
+				7AE01EEA24321DD800FDADD4 /* Controller */,
+				7AE01EE924321DD400FDADD4 /* View */,
+				7AE01EE824321DCB00FDADD4 /* Model */,
 			);
 			path = MediThink;
+			sourceTree = "<group>";
+		};
+		7AE01EE824321DCB00FDADD4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7AE01EDA24321D5000FDADD4 /* MediThink.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7AE01EE924321DD400FDADD4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7AE01EDD24321D5100FDADD4 /* Assets.xcassets */,
+				7AE01ED724321D5000FDADD4 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7AE01EEA24321DD800FDADD4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7AE01ED524321D5000FDADD4 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7AE01EEB24321DDE00FDADD4 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				7AE01EE224321D5100FDADD4 /* Info.plist */,
+				7AE01ED124321D5000FDADD4 /* AppDelegate.swift */,
+				7AE01ED324321D5000FDADD4 /* SceneDelegate.swift */,
+				7AE01EDF24321D5100FDADD4 /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +322,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HARHLUKYDS;
-				INFOPLIST_FILE = MediThink/Info.plist;
+				INFOPLIST_FILE = MediThink/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +340,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HARHLUKYDS;
-				INFOPLIST_FILE = MediThink/Info.plist;
+				INFOPLIST_FILE = MediThink/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
