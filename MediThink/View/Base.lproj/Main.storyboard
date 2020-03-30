@@ -1,24 +1,253 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lix-UQ-sjS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Médicaments-->
+        <scene sceneID="feQ-xa-CY4">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="sCx-de-nOI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="82S-YN-GXF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <viewLayoutGuide key="safeArea" id="hJt-G6-zgB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Médicaments" id="5F7-9o-JjB"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m8c-io-Jj8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="17" y="240"/>
+        </scene>
+        <!--Accueil-->
+        <scene sceneID="1r9-l3-vIP">
+            <objects>
+                <viewController id="xMy-3q-e5e" customClass="HomeViewController" customModule="MediThink" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ra3-wg-hMn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nFe-Qg-7S3">
+                                <rect key="frame" x="20" y="49" width="374" height="60.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UhR-NX-viV">
+                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="60.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lun." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S55-fA-S6y">
+                                                <rect key="frame" x="12.5" y="0.0" width="28" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WD-ft-fvA">
+                                                <rect key="frame" x="11.5" y="30.5" width="30" height="30"/>
+                                                <color key="backgroundColor" red="0.0" green="0.69321972129999998" blue="0.80683785679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" label="monday"/>
+                                                <state key="normal" title="30">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberDayBtn:" destination="xMy-3q-e5e" eventType="touchUpInside" id="RhL-xq-H7W"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QAY-O1-Jfx">
+                                        <rect key="frame" x="53.5" y="0.0" width="53.5" height="60.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mar." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vM-je-yLI">
+                                                <rect key="frame" x="10" y="0.0" width="33.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi7-nx-ffx">
+                                                <rect key="frame" x="11.5" y="30.5" width="30" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" label="tuesday">
+                                                    <bool key="isElement" value="NO"/>
+                                                </accessibility>
+                                                <state key="normal" title="31">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberDayBtn:" destination="xMy-3q-e5e" eventType="touchUpInside" id="gE3-I8-Zgd"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IYw-Ax-J9P">
+                                        <rect key="frame" x="107" y="0.0" width="53.5" height="60.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mer." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sY3-hE-I9k">
+                                                <rect key="frame" x="10" y="0.0" width="33.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ole-Uh-wvT">
+                                                <rect key="frame" x="11.5" y="30.5" width="30" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" label="wednesday"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberDayBtn:" destination="xMy-3q-e5e" eventType="touchUpInside" id="0dm-mP-bHD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qDv-fH-XwL">
+                                        <rect key="frame" x="160.5" y="0.0" width="53" height="60.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jeu." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLS-D0-Clm">
+                                                <rect key="frame" x="13" y="0.0" width="27.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfQ-66-Bzy">
+                                                <rect key="frame" x="11.5" y="30.5" width="30" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" label="thursday"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberDayBtn:" destination="xMy-3q-e5e" eventType="touchUpInside" id="eua-nm-aMN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YWL-jB-R9T">
+                                        <rect key="frame" x="213.5" y="0.0" width="53.5" height="60.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ven." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1Q-Jt-3CU">
+                                                <rect key="frame" x="11" y="0.0" width="32" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1g-Fl-QKr">
+                                                <rect key="frame" x="12" y="30.5" width="30" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" label="friday"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberDayBtn:" destination="xMy-3q-e5e" eventType="touchUpInside" id="mIj-Rb-pQq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5dB-Ni-xWQ">
+                                        <rect key="frame" x="267" y="0.0" width="53.5" height="60.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sam." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWM-a8-SMZ">
+                                                <rect key="frame" x="8.5" y="0.0" width="37" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60Y-1k-udV">
+                                                <rect key="frame" x="12" y="30.5" width="30" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" label="saturday"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberDayBtn:" destination="xMy-3q-e5e" eventType="touchUpInside" id="5C0-B3-Mtj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Psl-AF-MvD">
+                                        <rect key="frame" x="320.5" y="0.0" width="53.5" height="60.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dim." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cx-nW-3fW">
+                                                <rect key="frame" x="10.5" y="0.0" width="33" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j47-IJ-nOf">
+                                                <rect key="frame" x="12" y="30.5" width="30" height="30"/>
+                                                <accessibility key="accessibilityConfiguration" label="sunday"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="numberDayBtn:" destination="xMy-3q-e5e" eventType="touchUpInside" id="8py-Gx-O09"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lun., 30 mars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWE-49-BFB">
+                                <rect key="frame" x="0.0" y="109.5" width="414" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="K83-rH-PS5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="XWE-49-BFB" firstAttribute="leading" secondItem="2tS-I9-I3G" secondAttribute="leading" id="ByY-G7-APX"/>
+                            <constraint firstItem="nFe-Qg-7S3" firstAttribute="leading" secondItem="2tS-I9-I3G" secondAttribute="leading" constant="20" id="Dsu-Oj-HLu"/>
+                            <constraint firstItem="nFe-Qg-7S3" firstAttribute="top" secondItem="2tS-I9-I3G" secondAttribute="top" constant="5" id="GFL-7q-0LV"/>
+                            <constraint firstItem="XWE-49-BFB" firstAttribute="top" secondItem="nFe-Qg-7S3" secondAttribute="bottom" id="cMs-SA-vDT"/>
+                            <constraint firstItem="2tS-I9-I3G" firstAttribute="trailing" secondItem="XWE-49-BFB" secondAttribute="trailing" id="jBP-Vz-kYT"/>
+                            <constraint firstItem="2tS-I9-I3G" firstAttribute="trailing" secondItem="nFe-Qg-7S3" secondAttribute="trailing" constant="20" id="plP-Ok-imI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2tS-I9-I3G"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Accueil" id="Ai2-Ij-SOH"/>
+                    <connections>
+                        <outlet property="fridayNumber" destination="b1g-Fl-QKr" id="1NV-0d-kGq"/>
+                        <outlet property="mondayNumber" destination="6WD-ft-fvA" id="boe-YK-xed"/>
+                        <outlet property="saturdayNumber" destination="60Y-1k-udV" id="ytw-bV-fFZ"/>
+                        <outlet property="sundayNumber" destination="j47-IJ-nOf" id="ca1-BH-0EG"/>
+                        <outlet property="thursdayNumber" destination="CfQ-66-Bzy" id="WcY-4T-GfT"/>
+                        <outlet property="tuesdayNumber" destination="Zi7-nx-ffx" id="m1G-iC-hvG"/>
+                        <outlet property="wednesdayNumber" destination="Ole-Uh-wvT" id="8bc-xe-J8P"/>
+                        <outletCollection property="arrayNumberOutlet" destination="6WD-ft-fvA" collectionClass="NSMutableArray" id="7fa-E4-ESD"/>
+                        <outletCollection property="arrayNumberOutlet" destination="Zi7-nx-ffx" collectionClass="NSMutableArray" id="9Du-3e-Yb8"/>
+                        <outletCollection property="arrayNumberOutlet" destination="Ole-Uh-wvT" collectionClass="NSMutableArray" id="09B-ML-zF5"/>
+                        <outletCollection property="arrayNumberOutlet" destination="CfQ-66-Bzy" collectionClass="NSMutableArray" id="b71-mo-O9M"/>
+                        <outletCollection property="arrayNumberOutlet" destination="b1g-Fl-QKr" collectionClass="NSMutableArray" id="VD1-GC-aiH"/>
+                        <outletCollection property="arrayNumberOutlet" destination="60Y-1k-udV" collectionClass="NSMutableArray" id="WTS-Kq-7Gj"/>
+                        <outletCollection property="arrayNumberOutlet" destination="j47-IJ-nOf" collectionClass="NSMutableArray" id="XJu-4L-6YT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7K1-qS-673" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15.942028985507248" y="-566.51785714285711"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jC1-3f-zZN">
+            <objects>
+                <tabBarController id="Lix-UQ-sjS" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9lC-Y9-yvP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.058623619379999999" green="0.12466719" blue="0.16321334239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="xMy-3q-e5e" kind="relationship" relationship="viewControllers" id="Rw6-WV-kpU"/>
+                        <segue destination="sCx-de-nOI" kind="relationship" relationship="viewControllers" id="2fp-3B-A2Z"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jeg-pC-u4F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-901" y="-85"/>
         </scene>
     </scenes>
 </document>
