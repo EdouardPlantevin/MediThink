@@ -89,7 +89,7 @@ extension HomeViewController: UITableViewDataSource {
         switch days.activeDay {
             case .mon:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
-                cell.textLabel?.text = "Monday"
+                cell.textLabel?.text = MedicationDataModel.all[indexPath.row].name
                 cell.detailTextLabel?.text = "Monday"
                 return cell
             case .tue:

@@ -16,6 +16,7 @@
 		7AE01EF22432464600FDADD4 /* DateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01EF12432464600FDADD4 /* DateService.swift */; };
 		7AE01F0B2433960600FDADD4 /* MediThink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01F092433960600FDADD4 /* MediThink.xcdatamodeld */; };
 		7AE01F0D2433961D00FDADD4 /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01F0C2433961D00FDADD4 /* Days.swift */; };
+		7AE01F0F243398D300FDADD4 /* MedicationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01F0E243398D300FDADD4 /* MedicationDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		7AE01EF12432464600FDADD4 /* DateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateService.swift; sourceTree = "<group>"; };
 		7AE01F0A2433960600FDADD4 /* MediThink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MediThink.xcdatamodel; sourceTree = "<group>"; };
 		7AE01F0C2433961D00FDADD4 /* Days.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
+		7AE01F0E243398D300FDADD4 /* MedicationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				7AE01EF12432464600FDADD4 /* DateService.swift */,
 				7AE01F092433960600FDADD4 /* MediThink.xcdatamodeld */,
 				7AE01F0C2433961D00FDADD4 /* Days.swift */,
+				7AE01F0E243398D300FDADD4 /* MedicationDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				7AE01F0B2433960600FDADD4 /* MediThink.xcdatamodeld in Sources */,
 				7AE01F0D2433961D00FDADD4 /* Days.swift in Sources */,
 				7AE01EED2432266500FDADD4 /* HomeViewController.swift in Sources */,
+				7AE01F0F243398D300FDADD4 /* MedicationDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
