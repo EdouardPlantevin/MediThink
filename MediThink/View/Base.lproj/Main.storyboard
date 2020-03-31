@@ -292,6 +292,7 @@
                     <tabBarItem key="tabBarItem" title="Home" id="Ai2-Ij-SOH"/>
                     <connections>
                         <outlet property="currentDayLabel" destination="XWE-49-BFB" id="Onl-WY-ZNS"/>
+                        <outlet property="tableView" destination="g13-Qc-M4C" id="Iud-sc-36F"/>
                         <outletCollection property="arrayLabelDayOutlet" destination="6vM-je-yLI" collectionClass="NSMutableArray" id="42G-gb-Ey7"/>
                         <outletCollection property="arrayLabelDayOutlet" destination="sY3-hE-I9k" collectionClass="NSMutableArray" id="Tjl-Dk-BmE"/>
                         <outletCollection property="arrayLabelDayOutlet" destination="SLS-D0-Clm" collectionClass="NSMutableArray" id="El5-YP-b3X"/>

@@ -15,13 +15,14 @@ class DateSevice {
     //We use two array for right order
     var weekDay: [String] = []
     var dayNumber: [String] = []
+    var completeCurrentDay: String = ""
     
     // Use for get Array of current Week
     func getWeek() {
-        var nomberOfDay = 0
-        while nomberOfDay < 7 {
+        var numberOfDay = 0
+        while numberOfDay < 7 {
             var dayComponent    = DateComponents()
-            dayComponent.day    = nomberOfDay
+            dayComponent.day    = numberOfDay
             let theCalendar     = Calendar.current
             let nextDate        = theCalendar.date(byAdding: dayComponent, to: Date())
             if let nextDate = nextDate {
@@ -31,12 +32,15 @@ class DateSevice {
                 let formatterDay = DateFormatter()
                 formatterDay.dateFormat = "EEEE"
                 let dateDay = formatterDay.string(from: nextDate)
+                if numberOfDay == 0 {
+                    completeCurrentDay = "Today: \(dateDay) \(dayNumberString)"
+                }
                 let prefixDateDay = String(dateDay.prefix(3))
 
                 weekDay.append(prefixDateDay)
                 dayNumber.append(dayNumberString)
             }
-            nomberOfDay += 1
+            numberOfDay += 1
         }
     }    
     
