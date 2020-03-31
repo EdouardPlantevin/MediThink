@@ -21,10 +21,10 @@ class DateSevice {
     func getWeek() {
         var numberOfDay = 0
         while numberOfDay < 7 {
-            var dayComponent    = DateComponents()
-            dayComponent.day    = numberOfDay
-            let theCalendar     = Calendar.current
-            let nextDate        = theCalendar.date(byAdding: dayComponent, to: Date())
+            var dayComponent = DateComponents()
+            dayComponent.day = numberOfDay
+            let theCalendar = Calendar.current
+            let nextDate = theCalendar.date(byAdding: dayComponent, to: Date())
             if let nextDate = nextDate {
                 let formatterNumber = DateFormatter()
                 formatterNumber.dateFormat = "dd"

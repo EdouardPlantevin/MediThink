@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     
     let dateService = DateSevice()
     let days = Days()
+    var arrayOfMedicationOfDay: [MedicationDataModel] = []
     
     //OUTLET
     @IBOutlet var arrayNumberOutlet: [UIButton]!
@@ -27,6 +28,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dateService.getWeek()
+        arrayOfMedicationOfDay = MedicationDataModel.getMedicationOfCurrentDay(currentDay: dateService.weekDay.first ?? "mon")
+        tableView.reloadData()
     }
     
     //Function
@@ -59,6 +62,7 @@ class HomeViewController: UIViewController {
         setBackgroundButton()
         sender.backgroundColor = UIColor(red:0.00, green:0.69, blue:0.81, alpha:1.00)
         if let dayClic = sender.accessibilityLabel {
+            arrayOfMedicationOfDay = MedicationDataModel.getMedicationOfCurrentDay(currentDay: dayClic)
             days.daySelected(day: dayClic)
             tableView.reloadData()
         }
@@ -81,49 +85,16 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return arrayOfMedicationOfDay.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        switch days.activeDay {
-            case .mon:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
-                cell.textLabel?.text = MedicationDataModel.all[indexPath.row].name
-                cell.detailTextLabel?.text = "Monday"
-                return cell
-            case .tue:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
-                cell.textLabel?.text = "Tuesday"
-                cell.detailTextLabel?.text = "Tuesday"
-                return cell
-            case .wed:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
-                cell.textLabel?.text = "Wednesday"
-                cell.detailTextLabel?.text = "Wednesday"
-                return cell
-            case .thu:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
-                cell.textLabel?.text = "Thursday"
-                cell.detailTextLabel?.text = "Thursday"
-                return cell
-            case .fri:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
-                cell.textLabel?.text = "Friday"
-                cell.detailTextLabel?.text = "Friday"
-                return cell
-            case .sat:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
-                cell.textLabel?.text = "Saturday"
-                cell.detailTextLabel?.text = "Saturday"
-                return cell
-            case .sun:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
-                cell.textLabel?.text = "Sunday"
-                cell.detailTextLabel?.text = "Sunday"
-                return cell
-            
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
+        cell.textLabel?.text = arrayOfMedicationOfDay[indexPath.row].name
+        cell.detailTextLabel?.text = arrayOfMedicationOfDay[indexPath.row].name
+        return cell
+    
     }
 
     
@@ -132,3 +103,43 @@ extension HomeViewController: UITableViewDataSource {
     
      
  }
+  /*
+ switch days.activeDay {
+     case .mon:
+         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
+         cell.textLabel?.text = MedicationDataModel.all[indexPath.row].name
+         cell.detailTextLabel?.text = "Monday"
+         return cell
+     case .tue:
+         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
+         cell.textLabel?.text = "Tuesday"
+         cell.detailTextLabel?.text = "Tuesday"
+         return cell
+     case .wed:
+         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
+         cell.textLabel?.text = "Wednesday"
+         cell.detailTextLabel?.text = "Wednesday"
+         return cell
+     case .thu:
+         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
+         cell.textLabel?.text = "Thursday"
+         cell.detailTextLabel?.text = "Thursday"
+         return cell
+     case .fri:
+         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
+         cell.textLabel?.text = "Friday"
+         cell.detailTextLabel?.text = "Friday"
+         return cell
+     case .sat:
+         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
+         cell.textLabel?.text = "Saturday"
+         cell.detailTextLabel?.text = "Saturday"
+         return cell
+     case .sun:
+         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
+         cell.textLabel?.text = "Sunday"
+         cell.detailTextLabel?.text = "Sunday"
+         return cell
+     
+ }
+ */
