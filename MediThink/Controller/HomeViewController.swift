@@ -11,12 +11,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     let dateService = DateSevice()
-    
-    
-    enum currentDay {
-        case mon, tue, wed, thu, fri, sat, sun
-    }
-    var activeDay: currentDay = .mon
+    let days = Days()
     
     //OUTLET
     @IBOutlet var arrayNumberOutlet: [UIButton]!
@@ -54,7 +49,7 @@ class HomeViewController: UIViewController {
                 }
             }
         }
-        daySelected(day: arrayNumberOutlet[0].accessibilityLabel ?? "Mon")
+        days.daySelected(day: arrayNumberOutlet[0].accessibilityLabel ?? "Mon")
         currentDayLabel.text = dateService.completeCurrentDay
     }
     
@@ -64,34 +59,12 @@ class HomeViewController: UIViewController {
         setBackgroundButton()
         sender.backgroundColor = UIColor(red:0.00, green:0.69, blue:0.81, alpha:1.00)
         if let dayClic = sender.accessibilityLabel {
-            daySelected(day: dayClic)
+            days.daySelected(day: dayClic)
             tableView.reloadData()
         }
     }
     
     //Function
-    
-    func daySelected(day: String) {
-        switch day {
-        case "Mon":
-            activeDay = .mon
-        case "Tue":
-            activeDay = .tue
-        case "Wed":
-            activeDay = .wed
-        case "Thu":
-            activeDay = .thu
-        case "Fri":
-            activeDay = .fri
-        case "Sat":
-            activeDay = .sat
-        case "Sun":
-            activeDay = .sun
-        default:
-            activeDay = .mon
-        }
-
-    }
     
     func setBackgroundButton() {
         for button in arrayNumberOutlet {
@@ -113,7 +86,7 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        switch activeDay {
+        switch days.activeDay {
             case .mon:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
                 cell.textLabel?.text = "Monday"
