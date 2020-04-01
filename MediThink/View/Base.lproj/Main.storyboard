@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lix-UQ-sjS">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
                 <navigationController id="cUG-e2-npz" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="DZe-Y3-t3E"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v1m-Pa-9CH">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.058623619379999999" green="0.12466719" blue="0.16321334239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -35,29 +35,29 @@
             <objects>
                 <viewController id="604-qx-El6" customClass="MedicationViewController" customModule="MediThink" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ivz-Ld-UBh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l4g-ZY-9B8">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="475"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedicationCell" textLabel="esB-wH-My2" detailTextLabel="h9X-Dg-fol" style="IBUITableViewCellStyleSubtitle" id="SYl-kC-m0B">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SYl-kC-m0B" id="iZw-xd-8kb">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="esB-wH-My2">
-                                                    <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                                    <rect key="frame" x="15" y="10" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h9X-Dg-fol">
-                                                    <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                                    <rect key="frame" x="15" y="31.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -104,7 +104,7 @@
             <objects>
                 <viewController id="KUI-6O-xY1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gPh-fJ-V7F">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="toC-sD-hPz"/>
@@ -120,229 +120,145 @@
             <objects>
                 <viewController id="p4N-k8-7sf" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ocM-gh-uVc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWz-zS-VBw">
-                                <rect key="frame" x="0.0" y="88" width="414" height="829"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new medication" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab1-UT-Vfo">
+                                <rect key="frame" x="30" y="54" width="260" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9d5-zv-Orb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6Y-Vh-sno">
+                                <rect key="frame" x="30" y="114" width="260" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Qti-ON-l2W"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJi-gO-fId">
+                                <rect key="frame" x="30" y="197" width="260" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qpi-pZ-nwf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Doliprane" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pwK-Sx-Ag1">
+                                <rect key="frame" x="30" y="147" width="260" height="40"/>
+                                <color key="backgroundColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="IZr-xh-XOo"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="nickname"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="wpk-ri-kvc">
+                                <rect key="frame" x="30" y="230" width="260" height="30"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Twf-tw-OeG">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="829"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new medication" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab1-UT-Vfo">
-                                                <rect key="frame" x="86" y="20" width="242.5" height="50"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="9d5-zv-Orb"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="25"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6Y-Vh-sno">
-                                                <rect key="frame" x="30" y="90" width="54.5" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="Qti-ON-l2W"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJi-gO-fId">
-                                                <rect key="frame" x="30" y="184" width="354" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="30" id="qpi-pZ-nwf"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Doliprane" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pwK-Sx-Ag1">
-                                                <rect key="frame" x="30" y="124" width="354" height="40"/>
-                                                <color key="backgroundColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="IZr-xh-XOo"/>
-                                                </constraints>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="20"/>
-                                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="nickname"/>
-                                            </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1u-AO-RT0">
-                                                <rect key="frame" x="30" y="224" width="354" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="4mh-EJ-LbS"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="21"/>
-                                                <state key="normal" title="Every Day">
-                                                    <color key="titleColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uel-9U-zAl">
-                                                <rect key="frame" x="30" y="262" width="354" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="BU3-yd-TST"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="21"/>
-                                                <state key="normal" title="Monday">
-                                                    <color key="titleColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rA-4S-OKs">
-                                                <rect key="frame" x="30" y="300" width="354" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="WQz-wc-rOk"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="21"/>
-                                                <state key="normal" title="Tuesday">
-                                                    <color key="titleColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gul-g8-a5f">
-                                                <rect key="frame" x="30" y="338" width="354" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="se4-zF-Qna"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="21"/>
-                                                <state key="normal" title="Wednesday">
-                                                    <color key="titleColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPE-1I-uxM">
-                                                <rect key="frame" x="30" y="376" width="354" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="a7R-Hn-HeR"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="21"/>
-                                                <state key="normal" title="Thursday">
-                                                    <color key="titleColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdr-xT-LhS">
-                                                <rect key="frame" x="30" y="414" width="354" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="aj2-lt-GVP"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="21"/>
-                                                <state key="normal" title="Friday">
-                                                    <color key="titleColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yu-sr-gdC">
-                                                <rect key="frame" x="30" y="452" width="354" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="DR8-MC-piW"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="21"/>
-                                                <state key="normal" title="Saturday">
-                                                    <color key="titleColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4g-pe-8QR">
-                                                <rect key="frame" x="30" y="490" width="354" height="35"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="dB4-Hc-NXa"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="21"/>
-                                                <state key="normal" title="Sunday">
-                                                    <color key="titleColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gve-cZ-Fwu">
-                                                <rect key="frame" x="30" y="555" width="354" height="50"/>
-                                                <color key="backgroundColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="VkG-J9-cAn"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="22"/>
-                                                <state key="normal" title="Add">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </state>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.058623619379999999" green="0.12466719" blue="0.16321334239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ji-tj-beh">
+                                        <rect key="frame" x="230" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="2rA-4S-OKs" firstAttribute="top" secondItem="Uel-9U-zAl" secondAttribute="bottom" constant="3" id="22Q-vH-iHh"/>
-                                            <constraint firstItem="d1u-AO-RT0" firstAttribute="top" secondItem="TJi-gO-fId" secondAttribute="bottom" constant="10" id="39V-ye-cjQ"/>
-                                            <constraint firstItem="sdr-xT-LhS" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="4gg-F1-wNf"/>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="6Yu-sr-gdC" secondAttribute="trailing" constant="30" id="4hh-gU-nC1"/>
-                                            <constraint firstItem="hPE-1I-uxM" firstAttribute="top" secondItem="gul-g8-a5f" secondAttribute="bottom" constant="3" id="5Th-cM-1iV"/>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="d1u-AO-RT0" secondAttribute="trailing" constant="30" id="7s0-OA-EmZ"/>
-                                            <constraint firstItem="pwK-Sx-Ag1" firstAttribute="top" secondItem="y6Y-Vh-sno" secondAttribute="bottom" constant="4" id="94F-i1-KLi"/>
-                                            <constraint firstItem="gve-cZ-Fwu" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="9a3-dC-Y0f"/>
-                                            <constraint firstItem="6Yu-sr-gdC" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="9ls-rx-1Jl"/>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="pwK-Sx-Ag1" secondAttribute="trailing" constant="30" id="AeI-8l-z6r"/>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="TJi-gO-fId" secondAttribute="trailing" constant="30" id="Anp-jo-RLf"/>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gve-cZ-Fwu" secondAttribute="trailing" constant="30" id="BjB-jX-nrt"/>
-                                            <constraint firstItem="sdr-xT-LhS" firstAttribute="top" secondItem="hPE-1I-uxM" secondAttribute="bottom" constant="3" id="CGL-W6-rBd"/>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="hPE-1I-uxM" secondAttribute="trailing" constant="30" id="CfE-3i-uL1"/>
-                                            <constraint firstItem="gve-cZ-Fwu" firstAttribute="top" secondItem="b4g-pe-8QR" secondAttribute="bottom" constant="30" id="E1u-FS-qNt"/>
-                                            <constraint firstItem="b4g-pe-8QR" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="EwC-A5-JOP"/>
-                                            <constraint firstItem="y6Y-Vh-sno" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="G9x-lv-472"/>
-                                            <constraint firstItem="d1u-AO-RT0" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="GAy-vD-KW7"/>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="b4g-pe-8QR" secondAttribute="trailing" constant="30" id="GPj-69-pSp"/>
-                                            <constraint firstItem="TJi-gO-fId" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="OEU-nm-ibc"/>
-                                            <constraint firstItem="gul-g8-a5f" firstAttribute="top" secondItem="2rA-4S-OKs" secondAttribute="bottom" constant="3" id="UZb-TV-UK0"/>
-                                            <constraint firstItem="Uel-9U-zAl" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="XNM-2J-qyV"/>
-                                            <constraint firstItem="2rA-4S-OKs" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="YeP-lK-kCI"/>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="sdr-xT-LhS" secondAttribute="trailing" constant="30" id="bHp-YJ-JGs"/>
-                                            <constraint firstItem="Uel-9U-zAl" firstAttribute="top" secondItem="d1u-AO-RT0" secondAttribute="bottom" constant="3" id="dEI-9H-90L"/>
-                                            <constraint firstItem="TJi-gO-fId" firstAttribute="top" secondItem="pwK-Sx-Ag1" secondAttribute="bottom" constant="20" id="flB-nv-9jS"/>
-                                            <constraint firstItem="y6Y-Vh-sno" firstAttribute="top" secondItem="ab1-UT-Vfo" secondAttribute="bottom" constant="20" id="hWo-kV-PSO"/>
-                                            <constraint firstItem="hPE-1I-uxM" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="iue-wt-4N6"/>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="2rA-4S-OKs" secondAttribute="trailing" constant="30" id="jga-Ha-wMw"/>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Uel-9U-zAl" secondAttribute="trailing" constant="30" id="kUG-C6-tbX"/>
-                                            <constraint firstItem="b4g-pe-8QR" firstAttribute="top" secondItem="6Yu-sr-gdC" secondAttribute="bottom" constant="3" id="ka1-3l-XoU"/>
-                                            <constraint firstItem="gul-g8-a5f" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="klK-dU-BHS"/>
-                                            <constraint firstItem="ab1-UT-Vfo" firstAttribute="top" secondItem="Twf-tw-OeG" secondAttribute="top" constant="20" id="m6O-u9-NZ0"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="y6Y-Vh-sno" secondAttribute="trailing" constant="20" symbolic="YES" id="n2n-zQ-VyF"/>
-                                            <constraint firstItem="pwK-Sx-Ag1" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="oNh-YT-8We"/>
-                                            <constraint firstItem="ab1-UT-Vfo" firstAttribute="centerX" secondItem="Twf-tw-OeG" secondAttribute="centerX" id="v6S-b3-24f"/>
-                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gul-g8-a5f" secondAttribute="trailing" constant="30" id="vhx-hm-xmB"/>
-                                            <constraint firstItem="6Yu-sr-gdC" firstAttribute="top" secondItem="sdr-xT-LhS" secondAttribute="bottom" constant="3" id="yst-VA-4gq"/>
+                                            <constraint firstAttribute="height" constant="30" id="LWG-eZ-lGb"/>
+                                            <constraint firstAttribute="width" secondItem="6ji-tj-beh" secondAttribute="height" multiplier="1:1" id="irf-Wh-SlG"/>
                                         </constraints>
-                                    </view>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="minus" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U5o-CG-nVm">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="TP8-EF-uO5"/>
+                                            <constraint firstAttribute="width" secondItem="U5o-CG-nVm" secondAttribute="height" multiplier="1:1" id="ono-t2-Xnu"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="plus" catalog="system">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Twf-tw-OeG" firstAttribute="height" secondItem="ZWz-zS-VBw" secondAttribute="height" priority="250" id="BIf-eo-X8L"/>
-                                    <constraint firstItem="Twf-tw-OeG" firstAttribute="width" secondItem="ZWz-zS-VBw" secondAttribute="width" id="HZQ-wb-SIc"/>
-                                    <constraint firstAttribute="bottom" secondItem="Twf-tw-OeG" secondAttribute="bottom" id="JSE-Ze-2Tx"/>
-                                    <constraint firstItem="Twf-tw-OeG" firstAttribute="leading" secondItem="ZWz-zS-VBw" secondAttribute="leading" id="giP-Iv-SUh"/>
-                                    <constraint firstAttribute="trailing" secondItem="Twf-tw-OeG" secondAttribute="trailing" id="mCo-Nj-owq"/>
-                                    <constraint firstItem="Twf-tw-OeG" firstAttribute="top" secondItem="ZWz-zS-VBw" secondAttribute="top" id="sP2-8t-2NB"/>
+                                    <constraint firstItem="U5o-CG-nVm" firstAttribute="width" secondItem="U5o-CG-nVm" secondAttribute="height" multiplier="1:1" id="fcM-Aa-GPT"/>
                                 </constraints>
-                            </scrollView>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="J6z-HO-G20">
+                                <rect key="frame" x="30" y="270" width="260" height="179"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rcc-MJ-FOT">
+                                <rect key="frame" x="30" y="459" width="260" height="50"/>
+                                <color key="backgroundColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UlI-Ar-eBt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="23"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.058623619379999999" green="0.12466719" blue="0.16321334239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ZWz-zS-VBw" firstAttribute="trailing" secondItem="5n5-UY-UHc" secondAttribute="trailing" id="GNI-cG-KrS"/>
-                            <constraint firstItem="ZWz-zS-VBw" firstAttribute="top" secondItem="5n5-UY-UHc" secondAttribute="top" id="UWO-py-tLO"/>
-                            <constraint firstItem="ZWz-zS-VBw" firstAttribute="leading" secondItem="5n5-UY-UHc" secondAttribute="leading" id="aIU-wW-fdz"/>
-                            <constraint firstItem="ZWz-zS-VBw" firstAttribute="bottom" secondItem="5n5-UY-UHc" secondAttribute="bottom" id="bMK-A2-NRq"/>
+                            <constraint firstItem="5n5-UY-UHc" firstAttribute="trailing" secondItem="wpk-ri-kvc" secondAttribute="trailing" constant="30" id="3zE-L8-107"/>
+                            <constraint firstItem="pwK-Sx-Ag1" firstAttribute="leading" secondItem="5n5-UY-UHc" secondAttribute="leading" constant="30" id="5Yp-DW-uXN"/>
+                            <constraint firstItem="TJi-gO-fId" firstAttribute="top" secondItem="pwK-Sx-Ag1" secondAttribute="bottom" constant="10" id="9lB-bU-Rhu"/>
+                            <constraint firstItem="TJi-gO-fId" firstAttribute="leading" secondItem="5n5-UY-UHc" secondAttribute="leading" constant="30" id="A3f-mT-ncU"/>
+                            <constraint firstItem="wpk-ri-kvc" firstAttribute="leading" secondItem="5n5-UY-UHc" secondAttribute="leading" constant="30" id="A9S-37-ARb"/>
+                            <constraint firstItem="5n5-UY-UHc" firstAttribute="bottom" secondItem="Rcc-MJ-FOT" secondAttribute="bottom" constant="10" id="BZV-Lf-Bvg"/>
+                            <constraint firstItem="5n5-UY-UHc" firstAttribute="trailing" secondItem="TJi-gO-fId" secondAttribute="trailing" constant="30" id="CqD-q4-uz3"/>
+                            <constraint firstItem="5n5-UY-UHc" firstAttribute="trailing" secondItem="ab1-UT-Vfo" secondAttribute="trailing" constant="30" id="DgC-iJ-Ssk"/>
+                            <constraint firstItem="Rcc-MJ-FOT" firstAttribute="leading" secondItem="5n5-UY-UHc" secondAttribute="leading" constant="30" id="EaL-Ah-frH"/>
+                            <constraint firstItem="5n5-UY-UHc" firstAttribute="trailing" secondItem="J6z-HO-G20" secondAttribute="trailing" constant="30" id="Gp4-Pf-rkX"/>
+                            <constraint firstItem="5n5-UY-UHc" firstAttribute="trailing" secondItem="y6Y-Vh-sno" secondAttribute="trailing" constant="30" id="Obb-b5-aQh"/>
+                            <constraint firstItem="y6Y-Vh-sno" firstAttribute="top" secondItem="ab1-UT-Vfo" secondAttribute="bottom" constant="10" id="T2v-hR-37P"/>
+                            <constraint firstItem="ab1-UT-Vfo" firstAttribute="leading" secondItem="5n5-UY-UHc" secondAttribute="leading" constant="30" id="ZK0-J9-R6b"/>
+                            <constraint firstItem="ab1-UT-Vfo" firstAttribute="top" secondItem="5n5-UY-UHc" secondAttribute="top" constant="10" id="e99-zY-tjw"/>
+                            <constraint firstItem="wpk-ri-kvc" firstAttribute="top" secondItem="TJi-gO-fId" secondAttribute="bottom" constant="3" id="f5V-3P-G2n"/>
+                            <constraint firstItem="y6Y-Vh-sno" firstAttribute="leading" secondItem="5n5-UY-UHc" secondAttribute="leading" constant="30" id="j4x-Kw-jxr"/>
+                            <constraint firstItem="5n5-UY-UHc" firstAttribute="trailing" secondItem="Rcc-MJ-FOT" secondAttribute="trailing" constant="30" id="jhd-7k-Csj"/>
+                            <constraint firstItem="Rcc-MJ-FOT" firstAttribute="top" secondItem="J6z-HO-G20" secondAttribute="bottom" constant="10" id="nQX-1a-Zdn"/>
+                            <constraint firstItem="5n5-UY-UHc" firstAttribute="trailing" secondItem="pwK-Sx-Ag1" secondAttribute="trailing" constant="30" id="r8b-yt-D4n"/>
+                            <constraint firstItem="J6z-HO-G20" firstAttribute="top" secondItem="wpk-ri-kvc" secondAttribute="bottom" constant="10" id="rZM-02-8cL"/>
+                            <constraint firstItem="pwK-Sx-Ag1" firstAttribute="top" secondItem="y6Y-Vh-sno" secondAttribute="bottom" constant="3" id="u0N-F6-MRv"/>
+                            <constraint firstItem="J6z-HO-G20" firstAttribute="leading" secondItem="5n5-UY-UHc" secondAttribute="leading" constant="30" id="ybG-Bl-S9j"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5n5-UY-UHc"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add" id="f7c-E7-2XZ"/>
-                    <size key="freeformSize" width="414" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tbe-y1-WXI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1902.8985507246377" y="452.67857142857139"/>
+            <point key="canvasLocation" x="1901.25" y="444.71830985915494"/>
         </scene>
         <!--Home-->
         <scene sceneID="1r9-l3-vIP">
             <objects>
                 <viewController id="xMy-3q-e5e" customClass="HomeViewController" customModule="MediThink" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ra3-wg-hMn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nFe-Qg-7S3">
-                                <rect key="frame" x="20" y="49" width="374" height="60.5"/>
+                                <rect key="frame" x="20" y="5" width="280" height="60.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="UhR-NX-viV">
-                                        <rect key="frame" x="0.0" y="0.0" width="53.5" height="60.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="60.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="un" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S55-fA-S6y">
-                                                <rect key="frame" x="17" y="0.0" width="19.5" height="20.5"/>
+                                                <rect key="frame" x="10.5" y="0.0" width="19.5" height="20.5"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="0">
                                                     <bool key="isElement" value="YES"/>
                                                 </accessibility>
@@ -351,7 +267,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WD-ft-fvA">
-                                                <rect key="frame" x="11.5" y="30.5" width="30" height="30"/>
+                                                <rect key="frame" x="5" y="30.5" width="30" height="30"/>
                                                 <color key="backgroundColor" red="0.0" green="0.69321972129999998" blue="0.80683785679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="0"/>
                                                 <state key="normal" title="00">
@@ -369,17 +285,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QAY-O1-Jfx">
-                                        <rect key="frame" x="53.5" y="0.0" width="53.5" height="60.5"/>
+                                        <rect key="frame" x="40" y="0.0" width="40" height="60.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="de" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6vM-je-yLI">
-                                                <rect key="frame" x="17" y="0.0" width="19.5" height="20.5"/>
+                                                <rect key="frame" x="10.5" y="0.0" width="19.5" height="20.5"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="1"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zi7-nx-ffx">
-                                                <rect key="frame" x="11.5" y="30.5" width="30" height="30"/>
+                                                <rect key="frame" x="5" y="30.5" width="30" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="1">
                                                     <bool key="isElement" value="YES"/>
                                                 </accessibility>
@@ -398,17 +314,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IYw-Ax-J9P">
-                                        <rect key="frame" x="107" y="0.0" width="53.5" height="60.5"/>
+                                        <rect key="frame" x="80" y="0.0" width="40" height="60.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sY3-hE-I9k">
-                                                <rect key="frame" x="20.5" y="0.0" width="12" height="20.5"/>
+                                                <rect key="frame" x="14" y="0.0" width="12" height="20.5"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="2"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ole-Uh-wvT">
-                                                <rect key="frame" x="11.5" y="30.5" width="30" height="30"/>
+                                                <rect key="frame" x="5" y="30.5" width="30" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="2"/>
                                                 <state key="normal" title="00">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -425,17 +341,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qDv-fH-XwL">
-                                        <rect key="frame" x="160.5" y="0.0" width="53" height="60.5"/>
+                                        <rect key="frame" x="120" y="0.0" width="40" height="60.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="qu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLS-D0-Clm">
-                                                <rect key="frame" x="16.5" y="0.0" width="20" height="20.5"/>
+                                                <rect key="frame" x="10" y="0.0" width="20" height="20.5"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="3"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfQ-66-Bzy">
-                                                <rect key="frame" x="11.5" y="30.5" width="30" height="30"/>
+                                                <rect key="frame" x="5" y="30.5" width="30" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="3"/>
                                                 <state key="normal" title="00">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -452,17 +368,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YWL-jB-R9T">
-                                        <rect key="frame" x="213.5" y="0.0" width="53.5" height="60.5"/>
+                                        <rect key="frame" x="160" y="0.0" width="40" height="60.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ci" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1Q-Jt-3CU">
-                                                <rect key="frame" x="20.5" y="0.0" width="13" height="20.5"/>
+                                                <rect key="frame" x="13.5" y="0.0" width="13" height="20.5"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="4"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b1g-Fl-QKr">
-                                                <rect key="frame" x="12" y="30.5" width="30" height="30"/>
+                                                <rect key="frame" x="5" y="30.5" width="30" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="4"/>
                                                 <state key="normal" title="00">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -479,17 +395,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5dB-Ni-xWQ">
-                                        <rect key="frame" x="267" y="0.0" width="53.5" height="60.5"/>
+                                        <rect key="frame" x="200" y="0.0" width="40" height="60.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="si" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWM-a8-SMZ">
-                                                <rect key="frame" x="20.5" y="0.0" width="12.5" height="20.5"/>
+                                                <rect key="frame" x="14" y="0.0" width="12.5" height="20.5"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60Y-1k-udV">
-                                                <rect key="frame" x="12" y="30.5" width="30" height="30"/>
+                                                <rect key="frame" x="5" y="30.5" width="30" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="5"/>
                                                 <state key="normal" title="00">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -506,17 +422,17 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Psl-AF-MvD">
-                                        <rect key="frame" x="320.5" y="0.0" width="53.5" height="60.5"/>
+                                        <rect key="frame" x="240" y="0.0" width="40" height="60.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="se" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cx-nW-3fW">
-                                                <rect key="frame" x="18" y="0.0" width="18" height="20.5"/>
+                                                <rect key="frame" x="11" y="0.0" width="18" height="20.5"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="6"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j47-IJ-nOf">
-                                                <rect key="frame" x="12" y="30.5" width="30" height="30"/>
+                                                <rect key="frame" x="5" y="30.5" width="30" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="6"/>
                                                 <state key="normal" title="00">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -535,7 +451,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lun., 30 mars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XWE-49-BFB">
-                                <rect key="frame" x="0.0" y="109.5" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="65.5" width="320" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="K83-rH-PS5"/>
                                 </constraints>
@@ -544,25 +460,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g13-Qc-M4C">
-                                <rect key="frame" x="0.0" y="149.5" width="414" height="663.5"/>
+                                <rect key="frame" x="0.0" y="105.5" width="320" height="413.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeCell" textLabel="dCn-KY-9Kx" detailTextLabel="hHp-W5-3vV" style="IBUITableViewCellStyleSubtitle" id="2Y9-MW-1N3">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Y9-MW-1N3" id="8by-nw-oQL">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dCn-KY-9Kx">
-                                                    <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                                    <rect key="frame" x="15" y="10" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hHp-W5-3vV">
-                                                    <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                                    <rect key="frame" x="15" y="31.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
@@ -637,4 +553,8 @@
             <point key="canvasLocation" x="-901" y="-85"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="minus" catalog="system" width="64" height="14"/>
+        <image name="plus" catalog="system" width="64" height="58"/>
+    </resources>
 </document>
