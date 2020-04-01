@@ -90,56 +90,10 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath)
         cell.textLabel?.text = arrayOfMedicationOfDay[indexPath.row].name
         cell.detailTextLabel?.text = arrayOfMedicationOfDay[indexPath.row].name
         return cell
     
     }
-
-    
-    
-    
-    
-     
- }
-  /*
- switch days.activeDay {
-     case .mon:
-         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
-         cell.textLabel?.text = MedicationDataModel.all[indexPath.row].name
-         cell.detailTextLabel?.text = "Monday"
-         return cell
-     case .tue:
-         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
-         cell.textLabel?.text = "Tuesday"
-         cell.detailTextLabel?.text = "Tuesday"
-         return cell
-     case .wed:
-         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
-         cell.textLabel?.text = "Wednesday"
-         cell.detailTextLabel?.text = "Wednesday"
-         return cell
-     case .thu:
-         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
-         cell.textLabel?.text = "Thursday"
-         cell.detailTextLabel?.text = "Thursday"
-         return cell
-     case .fri:
-         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
-         cell.textLabel?.text = "Friday"
-         cell.detailTextLabel?.text = "Friday"
-         return cell
-     case .sat:
-         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
-         cell.textLabel?.text = "Saturday"
-         cell.detailTextLabel?.text = "Saturday"
-         return cell
-     case .sun:
-         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
-         cell.textLabel?.text = "Sunday"
-         cell.detailTextLabel?.text = "Sunday"
-         return cell
-     
- }
- */
+}

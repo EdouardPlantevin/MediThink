@@ -28,7 +28,6 @@ class MedicationDataModel: NSManagedObject {
                 print(currentDay)
                 if medicationDay.contains(currentDay) {
                     arrayMedicationsOfDay.append(medication)
-
                 }
             }
         }
@@ -36,6 +35,7 @@ class MedicationDataModel: NSManagedObject {
     }
     
     
+    // Delete one Medication
     static func removeMedication(medication: MedicationDataModel) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MedicationDataModel")
         if let name = medication.name {
@@ -51,6 +51,7 @@ class MedicationDataModel: NSManagedObject {
         }
     }
     
+    //Add new Medication to CoreData
     static func addMedication() {
         let medicationToAdd = MedicationDataModel(context: AppDelegate.viewContext)
         

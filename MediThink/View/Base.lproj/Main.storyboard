@@ -7,21 +7,325 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Medication-->
-        <scene sceneID="feQ-xa-CY4">
+        <!--Item-->
+        <scene sceneID="arm-Hk-ghj">
             <objects>
-                <viewController id="sCx-de-nOI" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="82S-YN-GXF">
+                <navigationController id="cUG-e2-npz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="DZe-Y3-t3E"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v1m-Pa-9CH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.058623619379999999" green="0.12466719" blue="0.16321334239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.058623619379999999" green="0.12466719" blue="0.16321334239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="604-qx-El6" kind="relationship" relationship="rootViewController" id="f5l-XN-QwR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wHv-zA-ccf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16" y="147"/>
+        </scene>
+        <!--Medication-->
+        <scene sceneID="urK-GZ-MNu">
+            <objects>
+                <viewController id="604-qx-El6" customClass="MedicationViewController" customModule="MediThink" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ivz-Ld-UBh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l4g-ZY-9B8">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedicationCell" textLabel="esB-wH-My2" detailTextLabel="h9X-Dg-fol" style="IBUITableViewCellStyleSubtitle" id="SYl-kC-m0B">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SYl-kC-m0B" id="iZw-xd-8kb">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="esB-wH-My2">
+                                                    <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h9X-Dg-fol">
+                                                    <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="KUI-6O-xY1" kind="show" id="EPL-KY-K8f"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="604-qx-El6" id="Sf5-8U-E02"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                        <viewLayoutGuide key="safeArea" id="hJt-G6-zgB"/>
+                        <constraints>
+                            <constraint firstItem="l4g-ZY-9B8" firstAttribute="leading" secondItem="gJi-bw-Ts4" secondAttribute="leading" id="4oG-3r-QsI"/>
+                            <constraint firstItem="l4g-ZY-9B8" firstAttribute="bottom" secondItem="gJi-bw-Ts4" secondAttribute="bottom" id="JJP-sn-0wf"/>
+                            <constraint firstItem="l4g-ZY-9B8" firstAttribute="top" secondItem="gJi-bw-Ts4" secondAttribute="top" id="Z1H-iV-F93"/>
+                            <constraint firstItem="l4g-ZY-9B8" firstAttribute="trailing" secondItem="gJi-bw-Ts4" secondAttribute="trailing" id="Zbz-s9-BPQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gJi-bw-Ts4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Medication" id="5F7-9o-JjB"/>
+                    <navigationItem key="navigationItem" title="Medication" id="kAH-cd-3Rg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="nl1-88-tce">
+                            <connections>
+                                <segue destination="p4N-k8-7sf" kind="show" id="bys-IP-9J4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="l4g-ZY-9B8" id="Tk0-Kp-Dgr"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m8c-io-Jj8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RKg-T0-lOd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17" y="240"/>
+            <point key="canvasLocation" x="918.84057971014499" y="147.99107142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rEf-xb-Ocy">
+            <objects>
+                <viewController id="KUI-6O-xY1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gPh-fJ-V7F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="toC-sD-hPz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="r5x-VJ-yLE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UuF-QU-ME8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1903" y="-240"/>
+        </scene>
+        <!--Add-->
+        <scene sceneID="bnt-Ir-PDT">
+            <objects>
+                <viewController id="p4N-k8-7sf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ocM-gh-uVc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWz-zS-VBw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="829"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Twf-tw-OeG">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="829"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new medication" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab1-UT-Vfo">
+                                                <rect key="frame" x="86" y="20" width="242.5" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="9d5-zv-Orb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="25"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6Y-Vh-sno">
+                                                <rect key="frame" x="30" y="90" width="54.5" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="Qti-ON-l2W"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TJi-gO-fId">
+                                                <rect key="frame" x="30" y="184" width="354" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="qpi-pZ-nwf"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Doliprane" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pwK-Sx-Ag1">
+                                                <rect key="frame" x="30" y="124" width="354" height="40"/>
+                                                <color key="backgroundColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="IZr-xh-XOo"/>
+                                                </constraints>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="20"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="nickname"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1u-AO-RT0">
+                                                <rect key="frame" x="30" y="224" width="354" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="4mh-EJ-LbS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="21"/>
+                                                <state key="normal" title="Every Day">
+                                                    <color key="titleColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uel-9U-zAl">
+                                                <rect key="frame" x="30" y="262" width="354" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="BU3-yd-TST"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="21"/>
+                                                <state key="normal" title="Monday">
+                                                    <color key="titleColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rA-4S-OKs">
+                                                <rect key="frame" x="30" y="300" width="354" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="WQz-wc-rOk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="21"/>
+                                                <state key="normal" title="Tuesday">
+                                                    <color key="titleColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gul-g8-a5f">
+                                                <rect key="frame" x="30" y="338" width="354" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="se4-zF-Qna"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="21"/>
+                                                <state key="normal" title="Wednesday">
+                                                    <color key="titleColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hPE-1I-uxM">
+                                                <rect key="frame" x="30" y="376" width="354" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="a7R-Hn-HeR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="21"/>
+                                                <state key="normal" title="Thursday">
+                                                    <color key="titleColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdr-xT-LhS">
+                                                <rect key="frame" x="30" y="414" width="354" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="aj2-lt-GVP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="21"/>
+                                                <state key="normal" title="Friday">
+                                                    <color key="titleColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yu-sr-gdC">
+                                                <rect key="frame" x="30" y="452" width="354" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="DR8-MC-piW"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="21"/>
+                                                <state key="normal" title="Saturday">
+                                                    <color key="titleColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4g-pe-8QR">
+                                                <rect key="frame" x="30" y="490" width="354" height="35"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="35" id="dB4-Hc-NXa"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Regular" family="Kohinoor Gujarati" pointSize="21"/>
+                                                <state key="normal" title="Sunday">
+                                                    <color key="titleColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gve-cZ-Fwu">
+                                                <rect key="frame" x="30" y="555" width="354" height="50"/>
+                                                <color key="backgroundColor" red="0.10356647519999999" green="0.6933605075" blue="0.79868084189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="VkG-J9-cAn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="22"/>
+                                                <state key="normal" title="Add">
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.058623619379999999" green="0.12466719" blue="0.16321334239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="2rA-4S-OKs" firstAttribute="top" secondItem="Uel-9U-zAl" secondAttribute="bottom" constant="3" id="22Q-vH-iHh"/>
+                                            <constraint firstItem="d1u-AO-RT0" firstAttribute="top" secondItem="TJi-gO-fId" secondAttribute="bottom" constant="10" id="39V-ye-cjQ"/>
+                                            <constraint firstItem="sdr-xT-LhS" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="4gg-F1-wNf"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="6Yu-sr-gdC" secondAttribute="trailing" constant="30" id="4hh-gU-nC1"/>
+                                            <constraint firstItem="hPE-1I-uxM" firstAttribute="top" secondItem="gul-g8-a5f" secondAttribute="bottom" constant="3" id="5Th-cM-1iV"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="d1u-AO-RT0" secondAttribute="trailing" constant="30" id="7s0-OA-EmZ"/>
+                                            <constraint firstItem="pwK-Sx-Ag1" firstAttribute="top" secondItem="y6Y-Vh-sno" secondAttribute="bottom" constant="4" id="94F-i1-KLi"/>
+                                            <constraint firstItem="gve-cZ-Fwu" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="9a3-dC-Y0f"/>
+                                            <constraint firstItem="6Yu-sr-gdC" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="9ls-rx-1Jl"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="pwK-Sx-Ag1" secondAttribute="trailing" constant="30" id="AeI-8l-z6r"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="TJi-gO-fId" secondAttribute="trailing" constant="30" id="Anp-jo-RLf"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gve-cZ-Fwu" secondAttribute="trailing" constant="30" id="BjB-jX-nrt"/>
+                                            <constraint firstItem="sdr-xT-LhS" firstAttribute="top" secondItem="hPE-1I-uxM" secondAttribute="bottom" constant="3" id="CGL-W6-rBd"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="hPE-1I-uxM" secondAttribute="trailing" constant="30" id="CfE-3i-uL1"/>
+                                            <constraint firstItem="gve-cZ-Fwu" firstAttribute="top" secondItem="b4g-pe-8QR" secondAttribute="bottom" constant="30" id="E1u-FS-qNt"/>
+                                            <constraint firstItem="b4g-pe-8QR" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="EwC-A5-JOP"/>
+                                            <constraint firstItem="y6Y-Vh-sno" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="G9x-lv-472"/>
+                                            <constraint firstItem="d1u-AO-RT0" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="GAy-vD-KW7"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="b4g-pe-8QR" secondAttribute="trailing" constant="30" id="GPj-69-pSp"/>
+                                            <constraint firstItem="TJi-gO-fId" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="OEU-nm-ibc"/>
+                                            <constraint firstItem="gul-g8-a5f" firstAttribute="top" secondItem="2rA-4S-OKs" secondAttribute="bottom" constant="3" id="UZb-TV-UK0"/>
+                                            <constraint firstItem="Uel-9U-zAl" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="XNM-2J-qyV"/>
+                                            <constraint firstItem="2rA-4S-OKs" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="YeP-lK-kCI"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="sdr-xT-LhS" secondAttribute="trailing" constant="30" id="bHp-YJ-JGs"/>
+                                            <constraint firstItem="Uel-9U-zAl" firstAttribute="top" secondItem="d1u-AO-RT0" secondAttribute="bottom" constant="3" id="dEI-9H-90L"/>
+                                            <constraint firstItem="TJi-gO-fId" firstAttribute="top" secondItem="pwK-Sx-Ag1" secondAttribute="bottom" constant="20" id="flB-nv-9jS"/>
+                                            <constraint firstItem="y6Y-Vh-sno" firstAttribute="top" secondItem="ab1-UT-Vfo" secondAttribute="bottom" constant="20" id="hWo-kV-PSO"/>
+                                            <constraint firstItem="hPE-1I-uxM" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="iue-wt-4N6"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="2rA-4S-OKs" secondAttribute="trailing" constant="30" id="jga-Ha-wMw"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Uel-9U-zAl" secondAttribute="trailing" constant="30" id="kUG-C6-tbX"/>
+                                            <constraint firstItem="b4g-pe-8QR" firstAttribute="top" secondItem="6Yu-sr-gdC" secondAttribute="bottom" constant="3" id="ka1-3l-XoU"/>
+                                            <constraint firstItem="gul-g8-a5f" firstAttribute="leading" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="klK-dU-BHS"/>
+                                            <constraint firstItem="ab1-UT-Vfo" firstAttribute="top" secondItem="Twf-tw-OeG" secondAttribute="top" constant="20" id="m6O-u9-NZ0"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="y6Y-Vh-sno" secondAttribute="trailing" constant="20" symbolic="YES" id="n2n-zQ-VyF"/>
+                                            <constraint firstItem="pwK-Sx-Ag1" firstAttribute="leading" relation="lessThanOrEqual" secondItem="Twf-tw-OeG" secondAttribute="leading" constant="30" id="oNh-YT-8We"/>
+                                            <constraint firstItem="ab1-UT-Vfo" firstAttribute="centerX" secondItem="Twf-tw-OeG" secondAttribute="centerX" id="v6S-b3-24f"/>
+                                            <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gul-g8-a5f" secondAttribute="trailing" constant="30" id="vhx-hm-xmB"/>
+                                            <constraint firstItem="6Yu-sr-gdC" firstAttribute="top" secondItem="sdr-xT-LhS" secondAttribute="bottom" constant="3" id="yst-VA-4gq"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Twf-tw-OeG" firstAttribute="height" secondItem="ZWz-zS-VBw" secondAttribute="height" priority="250" id="BIf-eo-X8L"/>
+                                    <constraint firstItem="Twf-tw-OeG" firstAttribute="width" secondItem="ZWz-zS-VBw" secondAttribute="width" id="HZQ-wb-SIc"/>
+                                    <constraint firstAttribute="bottom" secondItem="Twf-tw-OeG" secondAttribute="bottom" id="JSE-Ze-2Tx"/>
+                                    <constraint firstItem="Twf-tw-OeG" firstAttribute="leading" secondItem="ZWz-zS-VBw" secondAttribute="leading" id="giP-Iv-SUh"/>
+                                    <constraint firstAttribute="trailing" secondItem="Twf-tw-OeG" secondAttribute="trailing" id="mCo-Nj-owq"/>
+                                    <constraint firstItem="Twf-tw-OeG" firstAttribute="top" secondItem="ZWz-zS-VBw" secondAttribute="top" id="sP2-8t-2NB"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.058623619379999999" green="0.12466719" blue="0.16321334239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZWz-zS-VBw" firstAttribute="trailing" secondItem="5n5-UY-UHc" secondAttribute="trailing" id="GNI-cG-KrS"/>
+                            <constraint firstItem="ZWz-zS-VBw" firstAttribute="top" secondItem="5n5-UY-UHc" secondAttribute="top" id="UWO-py-tLO"/>
+                            <constraint firstItem="ZWz-zS-VBw" firstAttribute="leading" secondItem="5n5-UY-UHc" secondAttribute="leading" id="aIU-wW-fdz"/>
+                            <constraint firstItem="ZWz-zS-VBw" firstAttribute="bottom" secondItem="5n5-UY-UHc" secondAttribute="bottom" id="bMK-A2-NRq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5n5-UY-UHc"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add" id="f7c-E7-2XZ"/>
+                    <size key="freeformSize" width="414" height="1000"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tbe-y1-WXI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1902.8985507246377" y="452.67857142857139"/>
         </scene>
         <!--Home-->
         <scene sceneID="1r9-l3-vIP">
@@ -243,7 +547,7 @@
                                 <rect key="frame" x="0.0" y="149.5" width="414" height="663.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MedicationCell" textLabel="dCn-KY-9Kx" detailTextLabel="hHp-W5-3vV" style="IBUITableViewCellStyleSubtitle" id="2Y9-MW-1N3">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomeCell" textLabel="dCn-KY-9Kx" detailTextLabel="hHp-W5-3vV" style="IBUITableViewCellStyleSubtitle" id="2Y9-MW-1N3">
                                         <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2Y9-MW-1N3" id="8by-nw-oQL">
@@ -320,12 +624,12 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9lC-Y9-yvP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" red="0.058623619379999999" green="0.12466719" blue="0.16321334239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="xMy-3q-e5e" kind="relationship" relationship="viewControllers" id="Rw6-WV-kpU"/>
-                        <segue destination="sCx-de-nOI" kind="relationship" relationship="viewControllers" id="2fp-3B-A2Z"/>
+                        <segue destination="cUG-e2-npz" kind="relationship" relationship="viewControllers" id="2iA-bM-IT1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jeg-pC-u4F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

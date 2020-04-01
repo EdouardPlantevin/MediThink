@@ -2,9 +2,10 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="19A582a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="MedicationDataModel" representedClassName=".MedicationDataModel" syncable="YES" codeGenerationType="category">
         <attribute name="days" optional="YES" attributeType="String"/>
+        <attribute name="hour" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="MedicationDataModel" positionX="-9" positionY="36" width="128" height="73"/>
+        <element name="MedicationDataModel" positionX="-9" positionY="36" width="128" height="88"/>
     </elements>
 </model>

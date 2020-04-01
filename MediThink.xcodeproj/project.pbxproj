@@ -17,6 +17,7 @@
 		7AE01F0B2433960600FDADD4 /* MediThink.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01F092433960600FDADD4 /* MediThink.xcdatamodeld */; };
 		7AE01F0D2433961D00FDADD4 /* Days.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01F0C2433961D00FDADD4 /* Days.swift */; };
 		7AE01F0F243398D300FDADD4 /* MedicationDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01F0E243398D300FDADD4 /* MedicationDataModel.swift */; };
+		7AE01F112433C2FD00FDADD4 /* MedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01F102433C2FD00FDADD4 /* MedicationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		7AE01F0A2433960600FDADD4 /* MediThink.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MediThink.xcdatamodel; sourceTree = "<group>"; };
 		7AE01F0C2433961D00FDADD4 /* Days.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Days.swift; sourceTree = "<group>"; };
 		7AE01F0E243398D300FDADD4 /* MedicationDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationDataModel.swift; sourceTree = "<group>"; };
+		7AE01F102433C2FD00FDADD4 /* MedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				7AE01EEC2432266500FDADD4 /* HomeViewController.swift */,
+				7AE01F102433C2FD00FDADD4 /* MedicationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				7AE01ED424321D5000FDADD4 /* SceneDelegate.swift in Sources */,
 				7AE01F0B2433960600FDADD4 /* MediThink.xcdatamodeld in Sources */,
 				7AE01F0D2433961D00FDADD4 /* Days.swift in Sources */,
+				7AE01F112433C2FD00FDADD4 /* MedicationViewController.swift in Sources */,
 				7AE01EED2432266500FDADD4 /* HomeViewController.swift in Sources */,
 				7AE01F0F243398D300FDADD4 /* MedicationDataModel.swift in Sources */,
 			);
