@@ -17,21 +17,25 @@ class MedicationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-    
-    // Button
-    @IBAction func addMedication(_ sender: Any) {
-        
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
 }
 
 
 
-extension MedicationViewController: UITableViewDataSource {
+extension MedicationViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let drugToDelete = MedicationDataModel.all[indexPath.row]
+            MedicationDataModel.removeMedication(medication: drugToDelete)
+            tableView.reloadData()
+        }
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -42,10 +46,18 @@ extension MedicationViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath) as? MedicationTableViewCell else {
+            return UITableViewCell()
+        }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationCell", for: indexPath)
-        cell.textLabel?.text = MedicationDataModel.all[indexPath.row].name
-        cell.detailTextLabel?.text = MedicationDataModel.all[indexPath.row].name
+        guard let name = MedicationDataModel.all[indexPath.row].name else {
+            return UITableViewCell()
+        }
+        guard let hour = MedicationDataModel.all[indexPath.row].hourTake else {
+            return UITableViewCell()
+        }
+        
+        cell.configure(name: name, hour: hour)
         return cell
     
     }

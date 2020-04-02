@@ -20,15 +20,19 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var currentDayLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    
+    
 
     override func viewWillAppear(_ animated: Bool) {
         setupDate()
+        arrayOfMedicationOfDay = MedicationDataModel.getMedicationOfCurrentDay(currentDay: dateService.weekDay.first ?? "mon")
+        tableView.reloadData()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dateService.getWeek()
-        arrayOfMedicationOfDay = MedicationDataModel.getMedicationOfCurrentDay(currentDay: dateService.weekDay.first ?? "mon")
+        //arrayOfMedicationOfDay = MedicationDataModel.getMedicationOfCurrentDay(currentDay: dateService.weekDay.first ?? "mon")
         tableView.reloadData()
     }
     
@@ -62,6 +66,7 @@ class HomeViewController: UIViewController {
         setBackgroundButton()
         sender.backgroundColor = UIColor(red:0.00, green:0.69, blue:0.81, alpha:1.00)
         if let dayClic = sender.accessibilityLabel {
+            print(dayClic)
             arrayOfMedicationOfDay = MedicationDataModel.getMedicationOfCurrentDay(currentDay: dayClic)
             days.daySelected(day: dayClic)
             tableView.reloadData()
@@ -78,7 +83,11 @@ class HomeViewController: UIViewController {
 
 }
 
-extension HomeViewController: UITableViewDataSource {
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -90,9 +99,18 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath)
-        cell.textLabel?.text = arrayOfMedicationOfDay[indexPath.row].name
-        cell.detailTextLabel?.text = arrayOfMedicationOfDay[indexPath.row].name
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as? HomeTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        guard let name = arrayOfMedicationOfDay[indexPath.row].name else {
+            return UITableViewCell()
+        }
+        guard let hour = arrayOfMedicationOfDay[indexPath.row].hourTake else {
+            return UITableViewCell()
+        }
+        
+        cell.configure(name: name, hour: hour)
         return cell
     
     }

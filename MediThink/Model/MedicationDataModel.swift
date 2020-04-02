@@ -24,9 +24,7 @@ class MedicationDataModel: NSManagedObject {
         var arrayMedicationsOfDay: [MedicationDataModel] = []
         for medication in all {
             if let medicationDay = medication.days {
-                print(medicationDay)
-                print(currentDay)
-                if medicationDay.contains(currentDay) {
+                if medicationDay.contains(currentDay) || medication.everyDay == true {
                     arrayMedicationsOfDay.append(medication)
                 }
             }
@@ -52,12 +50,13 @@ class MedicationDataModel: NSManagedObject {
     }
     
     //Add new Medication to CoreData
-    static func addMedication() {
+    static func addMedication(name: String, days: String, hour: String, isEveryDay: Bool?) {
         let medicationToAdd = MedicationDataModel(context: AppDelegate.viewContext)
         
-        medicationToAdd.name = "Medicament Tue and Sat"
-        medicationToAdd.days = "Tue Sat"
-
+        medicationToAdd.name = name
+        medicationToAdd.days = days
+        medicationToAdd.everyDay = isEveryDay ?? false
+        medicationToAdd.hourTake = hour
         try? AppDelegate.viewContext.save()
     }
     
