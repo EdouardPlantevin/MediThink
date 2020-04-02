@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     let days = Days()
     var arrayOfMedicationOfDay: [MedicationDataModel] = []
     
-    //OUTLET
+    /*   Outlet   */
     @IBOutlet var arrayNumberOutlet: [UIButton]!
     @IBOutlet var arrayLabelDayOutlet: [UILabel]!
     @IBOutlet weak var currentDayLabel: UILabel!
@@ -32,21 +32,33 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dateService.getWeek()
-        //arrayOfMedicationOfDay = MedicationDataModel.getMedicationOfCurrentDay(currentDay: dateService.weekDay.first ?? "mon")
-        tableView.reloadData()
     }
     
-    //Function
+    
+    /*    Button    */
+    @IBAction func numberDayBtn(_ sender: UIButton) {
+        setBackgroundButton()
+        sender.backgroundColor = UIColor(red:0.00, green:0.69, blue:0.81, alpha:1.00)
+        if let dayClic = sender.accessibilityLabel {
+            arrayOfMedicationOfDay = MedicationDataModel.getMedicationOfCurrentDay(currentDay: dayClic)
+            days.daySelected(day: dayClic)
+            tableView.reloadData()
+        }
+    }
+    
+    /*   Function   */
     
     // setup week in top of the screen, day + number
-    func setupDate() {
+    private func setupDate() {
+        
         var index = 0
+        //Number
         for outletButton in arrayNumberOutlet {
             outletButton.setTitle(dateService.dayNumber[index], for: .normal)
             outletButton.accessibilityLabel = dateService.weekDay[index]
             index += 1
         }
-       
+        //Day
         for outletLabelDay in arrayLabelDayOutlet {
             if let indexLabel = Int(outletLabelDay.accessibilityIdentifier ?? "") {
                 for currentOutletLabelDay in arrayLabelDayOutlet {
@@ -60,22 +72,8 @@ class HomeViewController: UIViewController {
         currentDayLabel.text = dateService.completeCurrentDay
     }
     
-    //Button
-    @IBAction func numberDayBtn(_ sender: UIButton) {
-        tableView.reloadData()
-        setBackgroundButton()
-        sender.backgroundColor = UIColor(red:0.00, green:0.69, blue:0.81, alpha:1.00)
-        if let dayClic = sender.accessibilityLabel {
-            print(dayClic)
-            arrayOfMedicationOfDay = MedicationDataModel.getMedicationOfCurrentDay(currentDay: dayClic)
-            days.daySelected(day: dayClic)
-            tableView.reloadData()
-        }
-    }
-    
-    //Function
-    
-    func setBackgroundButton() {
+    //Transparent all number button
+    private func setBackgroundButton() {
         for button in arrayNumberOutlet {
             button.backgroundColor = UIColor.white.withAlphaComponent(0.0)
         }
@@ -83,6 +81,7 @@ class HomeViewController: UIViewController {
 
 }
 
+/*   Extention for tableView    */
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

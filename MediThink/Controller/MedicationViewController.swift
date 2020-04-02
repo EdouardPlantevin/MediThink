@@ -14,11 +14,6 @@ class MedicationViewController: UIViewController {
     //Outlet
     @IBOutlet weak var tableView: UITableView!
     
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
