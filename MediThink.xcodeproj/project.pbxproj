@@ -12,6 +12,11 @@
 		7A1EE5A22434E5D700D1E00B /* StringExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1EE5A12434E5D700D1E00B /* StringExtention.swift */; };
 		7A1EE5A42436027A00D1E00B /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1EE5A32436027A00D1E00B /* HomeTableViewCell.swift */; };
 		7A1EE5A624360C5E00D1E00B /* MedicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1EE5A524360C5E00D1E00B /* MedicationTableViewCell.swift */; };
+		7A1EE5A8243631C300D1E00B /* SeniorEstablishmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1EE5A7243631C300D1E00B /* SeniorEstablishmentViewController.swift */; };
+		7A1EE5AA2436328A00D1E00B /* SeniorEstablishmentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1EE5A92436328A00D1E00B /* SeniorEstablishmentService.swift */; };
+		7A1EE5AC2436341D00D1E00B /* SeniorEstablishment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1EE5AB2436341D00D1E00B /* SeniorEstablishment.swift */; };
+		7A1EE5AE24364DD500D1E00B /* DetailSeniorEstablishmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1EE5AD24364DD500D1E00B /* DetailSeniorEstablishmentViewController.swift */; };
+		7A1EE5B024364E1700D1E00B /* SeniorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1EE5AF24364E1700D1E00B /* SeniorTableViewCell.swift */; };
 		7AE01ED224321D5000FDADD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01ED124321D5000FDADD4 /* AppDelegate.swift */; };
 		7AE01ED424321D5000FDADD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01ED324321D5000FDADD4 /* SceneDelegate.swift */; };
 		7AE01ED924321D5000FDADD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE01ED724321D5000FDADD4 /* Main.storyboard */; };
@@ -31,6 +36,11 @@
 		7A1EE5A12434E5D700D1E00B /* StringExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtention.swift; sourceTree = "<group>"; };
 		7A1EE5A32436027A00D1E00B /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		7A1EE5A524360C5E00D1E00B /* MedicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationTableViewCell.swift; sourceTree = "<group>"; };
+		7A1EE5A7243631C300D1E00B /* SeniorEstablishmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeniorEstablishmentViewController.swift; sourceTree = "<group>"; };
+		7A1EE5A92436328A00D1E00B /* SeniorEstablishmentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeniorEstablishmentService.swift; sourceTree = "<group>"; };
+		7A1EE5AB2436341D00D1E00B /* SeniorEstablishment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeniorEstablishment.swift; sourceTree = "<group>"; };
+		7A1EE5AD24364DD500D1E00B /* DetailSeniorEstablishmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSeniorEstablishmentViewController.swift; sourceTree = "<group>"; };
+		7A1EE5AF24364E1700D1E00B /* SeniorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeniorTableViewCell.swift; sourceTree = "<group>"; };
 		7AE01ECE24321D5000FDADD4 /* MediThink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediThink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AE01ED124321D5000FDADD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AE01ED324321D5000FDADD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +102,8 @@
 				7AE01F092433960600FDADD4 /* MediThink.xcdatamodeld */,
 				7AE01F0C2433961D00FDADD4 /* Days.swift */,
 				7AE01F0E243398D300FDADD4 /* MedicationDataModel.swift */,
+				7A1EE5A92436328A00D1E00B /* SeniorEstablishmentService.swift */,
+				7A1EE5AB2436341D00D1E00B /* SeniorEstablishment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -104,6 +116,7 @@
 				7AE01EDD24321D5100FDADD4 /* Assets.xcassets */,
 				7AE01ED724321D5000FDADD4 /* Main.storyboard */,
 				7A1EE5A524360C5E00D1E00B /* MedicationTableViewCell.swift */,
+				7A1EE5AF24364E1700D1E00B /* SeniorTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -114,6 +127,8 @@
 				7AE01EEC2432266500FDADD4 /* HomeViewController.swift */,
 				7AE01F102433C2FD00FDADD4 /* MedicationViewController.swift */,
 				7A1EE59B2434C38400D1E00B /* AddMedicationViewController.swift */,
+				7A1EE5A7243631C300D1E00B /* SeniorEstablishmentViewController.swift */,
+				7A1EE5AD24364DD500D1E00B /* DetailSeniorEstablishmentViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -211,14 +226,19 @@
 				7A1EE5A22434E5D700D1E00B /* StringExtention.swift in Sources */,
 				7A1EE5A624360C5E00D1E00B /* MedicationTableViewCell.swift in Sources */,
 				7AE01ED224321D5000FDADD4 /* AppDelegate.swift in Sources */,
+				7A1EE5AE24364DD500D1E00B /* DetailSeniorEstablishmentViewController.swift in Sources */,
 				7A1EE59C2434C38400D1E00B /* AddMedicationViewController.swift in Sources */,
+				7A1EE5A8243631C300D1E00B /* SeniorEstablishmentViewController.swift in Sources */,
 				7AE01EF22432464600FDADD4 /* DateService.swift in Sources */,
 				7A1EE5A42436027A00D1E00B /* HomeTableViewCell.swift in Sources */,
+				7A1EE5AC2436341D00D1E00B /* SeniorEstablishment.swift in Sources */,
 				7AE01ED424321D5000FDADD4 /* SceneDelegate.swift in Sources */,
 				7AE01F0B2433960600FDADD4 /* MediThink.xcdatamodeld in Sources */,
 				7AE01F0D2433961D00FDADD4 /* Days.swift in Sources */,
 				7AE01F112433C2FD00FDADD4 /* MedicationViewController.swift in Sources */,
+				7A1EE5AA2436328A00D1E00B /* SeniorEstablishmentService.swift in Sources */,
 				7AE01EED2432266500FDADD4 /* HomeViewController.swift in Sources */,
+				7A1EE5B024364E1700D1E00B /* SeniorTableViewCell.swift in Sources */,
 				7A1EE5A02434CDEC00D1E00B /* FrequencyTableViewCell.swift in Sources */,
 				7AE01F0F243398D300FDADD4 /* MedicationDataModel.swift in Sources */,
 			);
