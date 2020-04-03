@@ -66,13 +66,14 @@ class MedicationDataModel: NSManagedObject {
     }
     
     //Add new Medication to CoreData
-    static func addMedication(name: String, days: String, hour: String) {
+    static func addMedication(name: String, days: String, hour: String, quantity: String) {
         let medicationToAdd = MedicationDataModel(context: AppDelegate.viewContext)
         
         medicationToAdd.name = name
         medicationToAdd.days = days
         medicationToAdd.hourTake = hour
         medicationToAdd.taken = false
+        medicationToAdd.quantity = quantity
         try? AppDelegate.viewContext.save()
     }
     

@@ -113,8 +113,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         let taken = arrayOfMedicationOfDay[indexPath.row].taken
+        let quantity = arrayOfMedicationOfDay[indexPath.row].quantity ?? "1"
         
-        cell.configure(name: name, hour: hour, taken: taken)
+        cell.configure(name: name, hour: hour, taken: taken, quantity: quantity)
         return cell
     
     }

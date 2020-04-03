@@ -4,9 +4,10 @@
         <attribute name="days" optional="YES" attributeType="String"/>
         <attribute name="hourTake" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="quantity" optional="YES" attributeType="String"/>
         <attribute name="taken" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
     </entity>
     <elements>
-        <element name="MedicationDataModel" positionX="-9" positionY="36" width="128" height="103"/>
+        <element name="MedicationDataModel" positionX="-9" positionY="36" width="128" height="118"/>
     </elements>
 </model>

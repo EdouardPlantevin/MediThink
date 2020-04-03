@@ -65,6 +65,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A1EE5B12437BAE600D1E00B /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7AE01F092433960600FDADD4 /* MediThink.xcdatamodeld */,
+				7AE01F0E243398D300FDADD4 /* MedicationDataModel.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		7A1EE5B22437BAF800D1E00B /* SeniorEstablishment */ = {
+			isa = PBXGroup;
+			children = (
+				7A1EE5A92436328A00D1E00B /* SeniorEstablishmentService.swift */,
+				7A1EE5AB2436341D00D1E00B /* SeniorEstablishment.swift */,
+			);
+			path = SeniorEstablishment;
+			sourceTree = "<group>";
+		};
+		7A1EE5B32437BBCC00D1E00B /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				7A1EE59F2434CDEC00D1E00B /* FrequencyTableViewCell.swift */,
+				7A1EE5A524360C5E00D1E00B /* MedicationTableViewCell.swift */,
+				7A1EE5A32436027A00D1E00B /* HomeTableViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 		7AE01EC524321D5000FDADD4 = {
 			isa = PBXGroup;
 			children = (
@@ -96,12 +124,10 @@
 		7AE01EE824321DCB00FDADD4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7A1EE5B22437BAF800D1E00B /* SeniorEstablishment */,
+				7A1EE5B12437BAE600D1E00B /* CoreData */,
 				7AE01EF12432464600FDADD4 /* DateService.swift */,
-				7AE01F092433960600FDADD4 /* MediThink.xcdatamodeld */,
 				7AE01F0C2433961D00FDADD4 /* Days.swift */,
-				7AE01F0E243398D300FDADD4 /* MedicationDataModel.swift */,
-				7A1EE5A92436328A00D1E00B /* SeniorEstablishmentService.swift */,
-				7A1EE5AB2436341D00D1E00B /* SeniorEstablishment.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,11 +135,9 @@
 		7AE01EE924321DD400FDADD4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7A1EE5A32436027A00D1E00B /* HomeTableViewCell.swift */,
-				7A1EE59F2434CDEC00D1E00B /* FrequencyTableViewCell.swift */,
+				7A1EE5B32437BBCC00D1E00B /* CustomCell */,
 				7AE01EDD24321D5100FDADD4 /* Assets.xcassets */,
 				7AE01ED724321D5000FDADD4 /* Main.storyboard */,
-				7A1EE5A524360C5E00D1E00B /* MedicationTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

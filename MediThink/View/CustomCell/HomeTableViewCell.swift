@@ -15,11 +15,7 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var hourMedicationLabel: UILabel!
     @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var imageTaken: UIImageView!
-    
-    //Outlet MedicationPage
-    
-    
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         setupView()
@@ -29,8 +25,8 @@ class HomeTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configure(name: String, hour: String, taken: Bool) {
-        nameMedicationLabel.text = name
+    func configure(name: String, hour: String, taken: Bool, quantity: String) {
+        nameMedicationLabel.text = name + "   " + quantity + " stamp"
         hourMedicationLabel.text = hour
         if taken {
             imageTaken.image = UIImage(named: "taken")

@@ -24,6 +24,7 @@ class AddMedicationViewController: UIViewController {
     @IBOutlet weak var dayMedicationLabel: UITextView!
     @IBOutlet weak var hourTextField: UITextField!
     @IBOutlet weak var minuteTextField: UITextField!
+    @IBOutlet weak var quantityTextField: UITextField!
     
     
 
@@ -44,6 +45,36 @@ class AddMedicationViewController: UIViewController {
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
         dismissAllKeybaord()
     }
+    
+    
+    @IBAction func plusBtn(_ sender: UIButton) {
+        if let labelTextField = quantityTextField.text {
+            if var intQuantity = Int(labelTextField) {
+                intQuantity += 1
+                quantityTextField.text = String(intQuantity)
+            }
+            if labelTextField == "1/2" {
+                quantityTextField.text = "1"
+            }
+        }
+    }
+    
+    @IBAction func minusBtn(_ sender: UIButton) {
+        if let labelTextField = quantityTextField.text {
+            if var intQuantity = Int(labelTextField) {
+                if intQuantity > 1 {
+                    intQuantity -= 1
+                    quantityTextField.text = String(intQuantity)
+                }
+                if intQuantity == 1 {
+                    quantityTextField.text = "1/2"
+                }
+            }
+        }
+    }
+    
+    
+    
     
     
     // Create and appear list of day + every day
@@ -121,9 +152,12 @@ class AddMedicationViewController: UIViewController {
                 showAlert(message: "You don't put right minute")
                 return
             }
+            
+            //Get Quantity
+            let quantity = quantityTextField.text ?? "1"
     
             for day in daysTakeMedication {
-                MedicationDataModel.addMedication(name: name, days: String(day.prefix(3)), hour: "\(hour)h\(minute)")
+                MedicationDataModel.addMedication(name: name, days: String(day.prefix(3)), hour: "\(hour)h\(minute)", quantity: quantity)
             }
             navigationController?.popViewController(animated: true)
         } else {

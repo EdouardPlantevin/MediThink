@@ -8,22 +8,7 @@
 
 import Foundation
 
-
-
-extension StringProtocol { // for Swift 4 you need to add the constrain `where Index == String.Index`
-    var byWords: [SubSequence] {
-        var byWords: [SubSequence] = []
-        enumerateSubstrings(in: startIndex..., options: .byWords) { _, range, _, _ in
-            byWords.append(self[range])
-        }
-        return byWords
-    }
-}
-
 extension String {
-    func capitalizingFirstLetter() -> String {
-        return prefix(1).uppercased() + self.lowercased().dropFirst()
-    }
     var isInt: Bool {
         return Int(self) != nil
     }
