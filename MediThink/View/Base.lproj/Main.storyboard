@@ -11,7 +11,7 @@
         <scene sceneID="arm-Hk-ghj">
             <objects>
                 <navigationController id="cUG-e2-npz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Medications" id="DZe-Y3-t3E"/>
+                    <tabBarItem key="tabBarItem" title="Medications" image="drugIcon" id="DZe-Y3-t3E"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="v1m-Pa-9CH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -123,7 +123,7 @@
                             <outletCollection property="gestureRecognizers" destination="WKw-vE-Jc5" appends="YES" id="VRt-A1-3ma"/>
                         </connections>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Senior Etablishment" id="eQU-Bb-97V"/>
+                    <tabBarItem key="tabBarItem" title="Senior Etablishment" image="seniorIcon" id="eQU-Bb-97V"/>
                     <connections>
                         <outlet property="tableView" destination="09m-PZ-AnO" id="bv1-Mh-4nr"/>
                         <outlet property="zipTextField" destination="TpW-qq-fub" id="OVC-UZ-kUE"/>
@@ -802,7 +802,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2tS-I9-I3G"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="Ai2-Ij-SOH"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="homeIcon" id="Ai2-Ij-SOH"/>
                     <connections>
                         <outlet property="currentDayLabel" destination="XWE-49-BFB" id="Onl-WY-ZNS"/>
                         <outlet property="tableView" destination="g13-Qc-M4C" id="Iud-sc-36F"/>
@@ -830,11 +830,13 @@
         <scene sceneID="jC1-3f-zZN">
             <objects>
                 <tabBarController id="Lix-UQ-sjS" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9lC-Y9-yvP">
+                    <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" id="9lC-Y9-yvP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1628027558" green="0.2191836834" blue="0.25262027980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.058623619379999999" green="0.12466719" blue="0.16321334239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.69321972129999998" blue="0.80683785679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="xMy-3q-e5e" kind="relationship" relationship="viewControllers" id="Rw6-WV-kpU"/>
@@ -848,6 +850,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="drugIcon" width="25" height="19"/>
+        <image name="homeIcon" width="25" height="25"/>
         <image name="plus" catalog="system" width="64" height="58"/>
+        <image name="seniorIcon" width="25" height="25"/>
     </resources>
 </document>
