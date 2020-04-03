@@ -9,22 +9,38 @@
 import UIKit
 
 class DetailSeniorEstablishmentViewController: UIViewController {
+    
+    
+    /*  Outlet  */
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var townLabel: UILabel!
+    @IBOutlet weak var zipLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    
+    
+    
+    var selectedEstablishment: SeniorEstablishment!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupPage()
+    }
+    
+    /*   Function   */
+    
+    private func setupPage() {
+        titleLabel.text = selectedEstablishment.name
+        townLabel.text = selectedEstablishment.town
+        zipLabel.text = selectedEstablishment.zip
+        phoneLabel.text = selectedEstablishment.phone
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    /*   Button   */
+    @IBAction func backBtn(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
-    */
-
+    
 }
+
+

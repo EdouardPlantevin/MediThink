@@ -37,7 +37,20 @@ class AddMedicationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    
+    
+    /*   Button   */
+    
+    // Tap Gesture recognizer
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        NameMedicationTextField.resignFirstResponder()
+        hourTextField.resignFirstResponder()
+        minuteTextField.resignFirstResponder()
+    }
+    
+    
+    
+    // Create and appear list of day + every day
     @IBAction func addFrequencyBtn(_ sender: UIButton) {
         transparentView.backgroundColor = UIColor.black.withAlphaComponent(0.9) //Transparent dark
         transparentView.frame = self.view.frame
@@ -62,7 +75,7 @@ class AddMedicationViewController: UIViewController {
         
     }
 
-    
+    // dismiss list of day
     @objc func onClickTransparentView() {
         let screenSize = UIScreen.main.bounds.size
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1.0, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {

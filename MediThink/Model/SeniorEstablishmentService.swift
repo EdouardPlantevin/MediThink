@@ -32,25 +32,19 @@ class SeniorEstablishmentService {
         task = session.dataTask(with: seniorUrl) { (data, response, error) in
             DispatchQueue.main.async {
                 guard let data = data, error == nil else {
-                    print("Error nO Data")
                     callBack(false)
                     return
                 }
                 guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                    print("Response")
                     callBack(false)
                     return
                 }
                 // JSON decodable
                 guard let senior = try? JSONDecoder().decode(SeniorEstablishmentFromJSON.self, from: data) else {
-                    print("Json")
                     callBack(false)
                     return
                 }
                 self.arrayOfSeniorEstablishment.removeAll()
-                print("--------------")
-                print(senior.features.count)
-                print("--------------")
                 for establishment in senior.features {
                     let name = establishment.properties.adresses.first?.lignes.first ?? "No name found"
 

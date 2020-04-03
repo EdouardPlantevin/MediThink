@@ -18,36 +18,60 @@ class SeniorEstablishmentViewController: UIViewController {
     @IBOutlet weak var zipTextField: UITextField!
     
     
+    
+    let senior = SeniorEstablishmentService(session: URLSession(configuration: .default))
+    var selectedEstablishment: SeniorEstablishment!
+
+    override func viewDidLoad() {
+        zipTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for: .editingChanged)
+        super.viewDidLoad()
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToDetailEstablishment" {
+            let detailVC = segue.destination as! DetailSeniorEstablishmentViewController
+            detailVC.selectedEstablishment = selectedEstablishment
+        }
+    }
+    
+    
+    /*     Button    */
+    
+    
+    // Tap Gesture Recognizer
+    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
+        zipTextField.resignFirstResponder()
+    }
+    
+    
+    
+    /*   Function   */
+    
+    //Check textfield + Call api gouv
     @objc func textFieldDidChange(_ textField: UITextField) {
         if zipTextField.text?.count == 2 {
             if let zipString = zipTextField.text, zipString.isInt == true {
                 senior.getSeniorEstablishment(city: zipString) { (success) in
                     if success {
                         self.tableView.reloadData()
-                        print("Success")
                     } else {
-                        print("error")
+                        //TO DO: - Show Alert nothing found
                     }
                 }
             }
         }
+        if zipTextField.text?.count ?? 0 > 2 {
+            zipTextField.text = ""
+        }
     }
     
-    let senior = SeniorEstablishmentService(session: URLSession(configuration: .default))
-
-    override func viewDidLoad() {
-        zipTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)),for: .editingChanged)
-        super.viewDidLoad()
-    }
+    
+    
 
 }
 
 extension SeniorEstablishmentViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-    }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -58,22 +82,22 @@ extension SeniorEstablishmentViewController: UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "SeniorCell", for: indexPath) as? SeniorTableViewCell else {
-            return UITableViewCell()
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SeniorCell", for: indexPath)
         
         let name = senior.arrayOfSeniorEstablishment[indexPath.row].name
         let town = senior.arrayOfSeniorEstablishment[indexPath.row].town
         
-        cell.configure(name: name, town: town)
-        
-        // Transparent color when selected cell
-        let bgColorView = UIView()
-        bgColorView.backgroundColor = UIColor.black.withAlphaComponent(0)
-        cell.selectedBackgroundView = bgColorView
+        cell.textLabel?.text = name
+        cell.detailTextLabel?.text = town
         
         return cell
     
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedEstablishment = senior.arrayOfSeniorEstablishment[indexPath.row]
+        performSegue(withIdentifier: "segueToDetailEstablishment", sender: self)
     }
     
     
