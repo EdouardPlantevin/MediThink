@@ -12,9 +12,8 @@ class AddMedicationViewController: UIViewController {
     
     var transparentView = UIView()
     var tableView = UITableView()
-    
     //Var use for create Medication
-    var daysTakeMedication = ""
+    var daysTakeMedication: [String] = []
     var isEveryDay: Bool = false
     
     let height: CGFloat = 300
@@ -43,15 +42,13 @@ class AddMedicationViewController: UIViewController {
     
     // Tap Gesture recognizer
     @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-        NameMedicationTextField.resignFirstResponder()
-        hourTextField.resignFirstResponder()
-        minuteTextField.resignFirstResponder()
+        dismissAllKeybaord()
     }
-    
     
     
     // Create and appear list of day + every day
     @IBAction func addFrequencyBtn(_ sender: UIButton) {
+        dismissAllKeybaord()
         transparentView.backgroundColor = UIColor.black.withAlphaComponent(0.9) //Transparent dark
         transparentView.frame = self.view.frame
         //Add transparentView to currentView
@@ -95,7 +92,7 @@ class AddMedicationViewController: UIViewController {
             return
         }
         //Days
-        if daysTakeMedication != "" || isEveryDay == true {
+        if daysTakeMedication.count > 0 || isEveryDay == true {
            
             //Hour
             guard let hour = hourTextField.text, hour.isInt == true else {
@@ -124,7 +121,10 @@ class AddMedicationViewController: UIViewController {
                 showAlert(message: "You don't put right minute")
                 return
             }
-            MedicationDataModel.addMedication(name: name, days: daysTakeMedication, hour: "\(hour)h\(minute)", isEveryDay: isEveryDay)
+    
+            for day in daysTakeMedication {
+                MedicationDataModel.addMedication(name: name, days: String(day.prefix(3)), hour: "\(hour)h\(minute)")
+            }
             navigationController?.popViewController(animated: true)
         } else {
             //Show alert : no days
@@ -136,6 +136,14 @@ class AddMedicationViewController: UIViewController {
     
     /*    Function   */
     
+    //Resign keyboard
+    private func dismissAllKeybaord() {
+        NameMedicationTextField.resignFirstResponder()
+        hourTextField.resignFirstResponder()
+        minuteTextField.resignFirstResponder()
+    }
+    
+    //Make alert to user
     private func showAlert(message: String) {
         let alertVC = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -143,33 +151,35 @@ class AddMedicationViewController: UIViewController {
         self.present(alertVC, animated: true, completion: nil)
     }
     
+    //Condition to add new day
     private func isEveryDay(_ isEveryDay: Bool) {
         if isEveryDay {
-            daysTakeMedication = ""
+            daysTakeMedication = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
             dayMedicationLabel.text = "Every Day"
             self.isEveryDay = true
         } else {
-            print("IsEveryDay")
-            daysTakeMedication = ""
+            daysTakeMedication.removeAll()
             dayMedicationLabel.text = ""
             self.isEveryDay = false
         }
     }
     
+    // Add new day
     private func clickOnDay(add: Bool, day: String) {
         if isEveryDay == true {
             isEveryDay(false)
         }
         if add {
             // Add
-            daysTakeMedication += "\(day.prefix(3)) "
+            daysTakeMedication.append("\(day.prefix(3))")
             dayMedicationLabel.text += "\(day)\n"
         } else {
             // Remove
-            daysTakeMedication = daysTakeMedication.replacingOccurrences(of: day.prefix(3), with: "")
+            if let index = daysTakeMedication.firstIndex(of: String(day.prefix(3))) {
+                daysTakeMedication.remove(at: index)
+            }
             dayMedicationLabel.text = dayMedicationLabel.text.replacingOccurrences(of: "\(day)\n", with: "")
         }
-        
     }
     
     
@@ -206,10 +216,10 @@ extension AddMedicationViewController: UITableViewDelegate, UITableViewDataSourc
                 isEveryDay(true)
             }
         } else {
-            if daysTakeMedication.contains("Every Day") {
+            if isEveryDay {
                 isEveryDay(false)
             }
-            if daysTakeMedication.contains(daySelected.prefix(3)) {
+            if daysTakeMedication.contains(String(daySelected.prefix(3))) {
                 //Remove day
                 clickOnDay(add: false, day: daySelected)
             } else {

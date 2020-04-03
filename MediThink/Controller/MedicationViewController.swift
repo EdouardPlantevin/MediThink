@@ -51,8 +51,11 @@ extension MedicationViewController: UITableViewDataSource, UITableViewDelegate {
         guard let hour = MedicationDataModel.all[indexPath.row].hourTake else {
             return UITableViewCell()
         }
+        guard let day = MedicationDataModel.all[indexPath.row].days else {
+            return UITableViewCell()
+        }
         
-        cell.configure(name: name, hour: hour)
+        cell.configure(name: name, hour: hour, day: day)
         return cell
     
     }

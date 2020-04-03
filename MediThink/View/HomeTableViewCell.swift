@@ -14,6 +14,7 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak var nameMedicationLabel: UILabel!
     @IBOutlet weak var hourMedicationLabel: UILabel!
     @IBOutlet weak var cellView: UIView!
+    @IBOutlet weak var imageTaken: UIImageView!
     
     //Outlet MedicationPage
     
@@ -28,9 +29,14 @@ class HomeTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configure(name: String, hour: String) {
+    func configure(name: String, hour: String, taken: Bool) {
         nameMedicationLabel.text = name
         hourMedicationLabel.text = hour
+        if taken {
+            imageTaken.image = UIImage(named: "taken")
+        } else {
+            imageTaken.image = UIImage(named: "noTaken")
+        }
     }
     
     func setupView() {

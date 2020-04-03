@@ -747,19 +747,30 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hour of medication" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zae-ga-Ph2">
-                                                            <rect key="frame" x="10" y="49.5" width="270" height="25.5"/>
+                                                            <rect key="frame" x="10" y="49.5" width="220" height="25.5"/>
                                                             <fontDescription key="fontDescription" name="KohinoorGujarati-Bold" family="Kohinoor Gujarati" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8FV-u9-l3y">
+                                                            <rect key="frame" x="240" y="41" width="50" height="34"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="50" id="t3K-Ne-GJ7"/>
+                                                            </constraints>
+                                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.058623619379999999" green="0.12466719" blue="0.16321334239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="M0S-fe-ohb" firstAttribute="top" secondItem="TDP-cy-ajQ" secondAttribute="top" constant="3" id="Cn1-BA-iqp"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Zae-ga-Ph2" secondAttribute="trailing" constant="10" id="DS1-zP-Aao"/>
                                                         <constraint firstAttribute="trailing" secondItem="M0S-fe-ohb" secondAttribute="trailing" constant="10" id="Hte-aW-j6C"/>
                                                         <constraint firstItem="M0S-fe-ohb" firstAttribute="leading" secondItem="TDP-cy-ajQ" secondAttribute="leading" constant="10" id="No3-h1-DYP"/>
+                                                        <constraint firstAttribute="trailing" secondItem="8FV-u9-l3y" secondAttribute="trailing" id="WYa-bw-u0O"/>
+                                                        <constraint firstAttribute="bottom" secondItem="8FV-u9-l3y" secondAttribute="bottom" constant="3" id="bkF-5G-OmG"/>
+                                                        <constraint firstItem="8FV-u9-l3y" firstAttribute="top" secondItem="M0S-fe-ohb" secondAttribute="bottom" constant="8" id="dZR-Hl-Dcs"/>
                                                         <constraint firstItem="Zae-ga-Ph2" firstAttribute="leading" secondItem="TDP-cy-ajQ" secondAttribute="leading" constant="10" id="eOy-vZ-7Ik"/>
+                                                        <constraint firstItem="Zae-ga-Ph2" firstAttribute="top" secondItem="M0S-fe-ohb" secondAttribute="bottom" constant="16.5" id="pA8-Tz-bnR"/>
+                                                        <constraint firstItem="8FV-u9-l3y" firstAttribute="leading" secondItem="Zae-ga-Ph2" secondAttribute="trailing" constant="10" id="th3-Q9-BEH"/>
                                                         <constraint firstAttribute="bottom" secondItem="Zae-ga-Ph2" secondAttribute="bottom" constant="3" id="x5o-fv-4Z0"/>
                                                     </constraints>
                                                 </view>
@@ -776,6 +787,7 @@
                                         <connections>
                                             <outlet property="cellView" destination="TDP-cy-ajQ" id="zBe-jv-F8p"/>
                                             <outlet property="hourMedicationLabel" destination="Zae-ga-Ph2" id="5Yf-de-e7f"/>
+                                            <outlet property="imageTaken" destination="8FV-u9-l3y" id="ASc-3a-eKa"/>
                                             <outlet property="nameMedicationLabel" destination="M0S-fe-ohb" id="oxV-Wg-tfG"/>
                                         </connections>
                                     </tableViewCell>
@@ -824,7 +836,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7K1-qS-673" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="-813"/>
+            <point key="canvasLocation" x="112.5" y="-813.38028169014081"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jC1-3f-zZN">

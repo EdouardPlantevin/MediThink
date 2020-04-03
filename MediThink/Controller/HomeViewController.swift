@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         setupDate()
-        arrayOfMedicationOfDay = MedicationDataModel.getMedicationOfCurrentDay(currentDay: dateService.weekDay.first ?? "mon")
+        fillArrayOfMedicationOfDay(day: dateService.weekDay.first ?? "Mon")
         tableView.reloadData()
     }
     
@@ -40,13 +40,17 @@ class HomeViewController: UIViewController {
         setBackgroundButton()
         sender.backgroundColor = UIColor(red:0.00, green:0.69, blue:0.81, alpha:1.00)
         if let dayClic = sender.accessibilityLabel {
-            arrayOfMedicationOfDay = MedicationDataModel.getMedicationOfCurrentDay(currentDay: dayClic)
+            fillArrayOfMedicationOfDay(day: dayClic)
             days.daySelected(day: dayClic)
             tableView.reloadData()
         }
     }
     
     /*   Function   */
+    
+    private func fillArrayOfMedicationOfDay(day: String) {
+        arrayOfMedicationOfDay = MedicationDataModel.getMedicationOfCurrentDay(currentDay: day)
+    }
     
     // setup week in top of the screen, day + number
     private func setupDate() {
@@ -108,10 +112,16 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         guard let hour = arrayOfMedicationOfDay[indexPath.row].hourTake else {
             return UITableViewCell()
         }
+        let taken = arrayOfMedicationOfDay[indexPath.row].taken
         
-        cell.configure(name: name, hour: hour)
+        cell.configure(name: name, hour: hour, taken: taken)
         return cell
     
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        MedicationDataModel.takenMedication(medication: arrayOfMedicationOfDay[indexPath.row])
+        tableView.reloadData()
+     }
 
 }

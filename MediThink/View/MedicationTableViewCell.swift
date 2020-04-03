@@ -29,9 +29,9 @@ class MedicationTableViewCell: UITableViewCell {
     }
     
     
-    func configure(name: String, hour: String) {
+    func configure(name: String, hour: String, day: String) {
         nameMedicationLabel.text = name
-        hourMedicationLabel.text = hour
+        hourMedicationLabel.text = day + "  " + hour
     }
     
     func setupView() {

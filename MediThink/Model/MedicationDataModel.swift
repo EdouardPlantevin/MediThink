@@ -24,7 +24,7 @@ class MedicationDataModel: NSManagedObject {
         var arrayMedicationsOfDay: [MedicationDataModel] = []
         for medication in all {
             if let medicationDay = medication.days {
-                if medicationDay.contains(currentDay) || medication.everyDay == true {
+                if medicationDay.contains(currentDay) {
                     arrayMedicationsOfDay.append(medication)
                 }
             }
@@ -36,27 +36,43 @@ class MedicationDataModel: NSManagedObject {
     // Delete one Medication
     static func removeMedication(medication: MedicationDataModel) {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MedicationDataModel")
-        if let name = medication.name {
-            fetchRequest.predicate = NSPredicate(format: "name = %@", name)
-        }
+        let id = medication.objectID
+        fetchRequest.predicate = NSPredicate(format: "self == %@", id)
+        
 
         let profiles = try? AppDelegate.viewContext.fetch(fetchRequest)
         if let profiles = profiles {
-            if let recipe = profiles.first as? MedicationDataModel {
-                AppDelegate.viewContext.delete(recipe)
+            if let medication = profiles.first as? MedicationDataModel {
+                AppDelegate.viewContext.delete(medication)
+                try? AppDelegate.viewContext.save()
+            }
+        }
+    }
+    
+    //Swith taken Medication
+    static func takenMedication(medication: MedicationDataModel) {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "MedicationDataModel")
+        let id = medication.objectID
+        fetchRequest.predicate = NSPredicate(format: "self == %@", id)
+        
+
+        let profiles = try? AppDelegate.viewContext.fetch(fetchRequest)
+        if let profiles = profiles {
+            if let medication = profiles.first as? MedicationDataModel {
+                medication.setValue(!medication.taken, forKey: "taken")
                 try? AppDelegate.viewContext.save()
             }
         }
     }
     
     //Add new Medication to CoreData
-    static func addMedication(name: String, days: String, hour: String, isEveryDay: Bool?) {
+    static func addMedication(name: String, days: String, hour: String) {
         let medicationToAdd = MedicationDataModel(context: AppDelegate.viewContext)
         
         medicationToAdd.name = name
         medicationToAdd.days = days
-        medicationToAdd.everyDay = isEveryDay ?? false
         medicationToAdd.hourTake = hour
+        medicationToAdd.taken = false
         try? AppDelegate.viewContext.save()
     }
     
