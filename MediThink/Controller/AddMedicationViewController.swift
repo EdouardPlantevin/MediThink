@@ -10,13 +10,16 @@ import UIKit
 
 class AddMedicationViewController: UIViewController {
     
+    //Use for create list of day
     var transparentView = UIView()
     var tableView = UITableView()
+    let height: CGFloat = 300
+    
     //Var use for create Medication
     var daysTakeMedication: [String] = []
     var isEveryDay: Bool = false
     
-    let height: CGFloat = 300
+   
     
     
     //Outlet
@@ -119,7 +122,7 @@ class AddMedicationViewController: UIViewController {
         //Name
         guard let name = NameMedicationTextField.text, name != "" else {
             //Show alert : No name
-            showAlert(message: "You don't put medication")
+            presentAlert(view: self, message: "You don't put medication")
             return
         }
         //Days
@@ -128,28 +131,28 @@ class AddMedicationViewController: UIViewController {
             //Hour
             guard let hour = hourTextField.text, hour.isInt == true else {
                 //Show Alert : No hour
-                showAlert(message: "You have to put hour")
+                presentAlert(view: self, message: "You have to put hour")
                 return
             }
             
             //No more 24hour and no less than 0
             guard let hourInt = Int(hour), hourInt <= 24, hourInt >= 0 else {
                 //Show alert : Should be lass than 24, or more than 0
-                showAlert(message: "You have to put right hour")
+                presentAlert(view: self, message: "You have to put right hour")
                 return
             }
             
             //Minute
             guard let minute = minuteTextField.text, minute.isInt == true else {
                 //Show Alert : No Minute
-                showAlert(message: "You don't put minute")
+                presentAlert(view: self, message: "You don't put minute")
                 return
             }
             
             //No more 60 minute and no less than 0
             guard let minuteInt = Int(minute), minuteInt <= 59, minuteInt >= 0 else {
                 //Show alert : Should be less than 60 or more than 0
-                showAlert(message: "You don't put right minute")
+                presentAlert(view: self, message: "You don't put right minute")
                 return
             }
             
@@ -162,7 +165,7 @@ class AddMedicationViewController: UIViewController {
             navigationController?.popViewController(animated: true)
         } else {
             //Show alert : no days
-            showAlert(message: "Click on + to add day")
+            presentAlert(view: self, message: "Click on + to add day")
         }
     }
     
@@ -175,14 +178,6 @@ class AddMedicationViewController: UIViewController {
         NameMedicationTextField.resignFirstResponder()
         hourTextField.resignFirstResponder()
         minuteTextField.resignFirstResponder()
-    }
-    
-    //Make alert to user
-    private func showAlert(message: String) {
-        let alertVC = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alertVC.addAction(action)
-        self.present(alertVC, animated: true, completion: nil)
     }
     
     //Condition to add new day

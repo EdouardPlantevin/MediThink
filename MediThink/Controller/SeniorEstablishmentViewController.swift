@@ -28,6 +28,7 @@ class SeniorEstablishmentViewController: UIViewController {
         
     }
     
+    //Send data to DetailEstablishmentViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueToDetailEstablishment" {
             let detailVC = segue.destination as! DetailSeniorEstablishmentViewController
@@ -56,7 +57,7 @@ class SeniorEstablishmentViewController: UIViewController {
                     if success {
                         self.tableView.reloadData()
                     } else {
-                        //TO DO: - Show Alert nothing found
+                        presentAlert(view: self, message: "Nothing found")
                     }
                 }
             }

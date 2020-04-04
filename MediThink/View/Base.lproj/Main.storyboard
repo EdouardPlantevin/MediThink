@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Lix-UQ-sjS">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -394,7 +395,7 @@
                                     <constraint firstAttribute="height" constant="30" id="tcV-E4-89R"/>
                                 </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="plus" catalog="system">
+                                <state key="normal" image="plusBlack">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
@@ -482,7 +483,7 @@
                                             <constraint firstAttribute="height" constant="22" id="YVt-nN-Kjr"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="plus" catalog="system"/>
+                                        <state key="normal" image="plus"/>
                                         <connections>
                                             <action selector="plusBtn:" destination="p4N-k8-7sf" eventType="touchUpInside" id="Mjt-ql-JOV"/>
                                         </connections>
@@ -494,12 +495,12 @@
                                             <constraint firstAttribute="height" constant="22" id="dOY-rl-JPM"/>
                                         </constraints>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" image="minus" catalog="system"/>
+                                        <state key="normal" image="minus"/>
                                         <connections>
                                             <action selector="minusBtn:" destination="p4N-k8-7sf" eventType="touchUpInside" id="S7M-tB-NU4"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nLY-sf-27B">
+                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nLY-sf-27B">
                                         <rect key="frame" x="60" y="0.0" width="40" height="22"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="vGE-jh-1t5"/>
@@ -915,8 +916,9 @@
     <resources>
         <image name="drugIcon" width="25" height="19"/>
         <image name="homeIcon" width="25" height="25"/>
-        <image name="minus" catalog="system" width="64" height="14"/>
-        <image name="plus" catalog="system" width="64" height="58"/>
+        <image name="minus" width="24" height="24"/>
+        <image name="plus" width="24" height="24"/>
+        <image name="plusBlack" width="24" height="24"/>
         <image name="seniorIcon" width="25" height="25"/>
     </resources>
 </document>

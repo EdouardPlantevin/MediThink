@@ -12,7 +12,7 @@ import Foundation
 class DateSevice {
     
     //Use on AddMedicationController
-    static var arrayOfDay: [String] = ["Every Day", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    static let arrayOfDay: [String] = ["Every Day", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
     
     //We use two array for right order
     var weekDay: [String] = []
@@ -44,6 +44,6 @@ class DateSevice {
             }
             numberOfDay += 1
         }
-    }    
+    }
     
 }

@@ -30,8 +30,9 @@ class MedicationTableViewCell: UITableViewCell {
     
     
     func configure(name: String, hour: String, day: String) {
+        let completeDay = Days.translateDay(day)
         nameMedicationLabel.text = name
-        hourMedicationLabel.text = day + "  " + hour
+        hourMedicationLabel.text = completeDay + "  " + hour
     }
     
     func setupView() {

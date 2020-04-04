@@ -15,6 +15,11 @@ enum currentDay {
 class Days {
     
     var activeDay: currentDay = .mon
+    var arrayOfMedicationOfDay: [MedicationDataModel] = []
+    
+    func fillArrayOfMedicationOfDay(day: String) {
+        arrayOfMedicationOfDay = MedicationDataModel.getMedicationOfCurrentDay(currentDay: day)
+    }
     
     func daySelected(day: String) {
         switch day {
@@ -35,7 +40,27 @@ class Days {
         default:
             activeDay = .mon
         }
-
+    }
+    
+    static func translateDay(_ day: String) -> String {
+        switch day {
+        case "Mon":
+            return "Monday"
+        case "Tue":
+            return "Tuesday"
+        case "Wed":
+            return "Wednesday"
+        case "Thu":
+            return "Thursday"
+        case "Fri":
+            return "Friday"
+        case "Sat":
+            return "Saturday"
+        case "Sun":
+            return "Sunday"
+        default:
+            return "Monday"
+        }
     }
     
 }
