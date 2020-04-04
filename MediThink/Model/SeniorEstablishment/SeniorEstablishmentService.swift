@@ -48,7 +48,6 @@ class SeniorEstablishmentService {
                 for establishment in senior.features {
                     let name = establishment.properties.adresses.first?.lignes.first ?? "No name found"
 
-        
                     let zip = establishment.properties.adresses.first?.codePostal ?? "No zip found"
                     let town = establishment.properties.adresses.first?.commune ?? "No town found"
                     let phone = establishment.properties.telephone

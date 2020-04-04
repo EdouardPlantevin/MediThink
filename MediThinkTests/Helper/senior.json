@@ -605,10 +605,9 @@
                     {
                         "type": "géopostale",
                         "lignes": [
-                           
                         ],
-                        "codePostal": "61400",
-                        "commune": "Mortagne-au-Perche",
+                        
+                        
                         "coordonnees": [
                             0.540794,
                             48.521974

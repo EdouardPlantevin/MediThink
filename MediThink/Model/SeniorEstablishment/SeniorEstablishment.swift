@@ -52,7 +52,7 @@ struct Properties: Codable {
 struct Adress: Codable {
     let type: String
     let lignes: [String]
-    let codePostal, commune: String
+    let codePostal, commune: String?
     let coordonnees: [Double]
 }
 
