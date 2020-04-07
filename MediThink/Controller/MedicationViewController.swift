@@ -57,6 +57,5 @@ extension MedicationViewController: UITableViewDataSource, UITableViewDelegate {
         
         cell.configure(name: name, hour: hour, day: day)
         return cell
-    
     }
 }

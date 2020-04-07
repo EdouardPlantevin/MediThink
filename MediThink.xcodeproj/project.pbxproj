@@ -23,6 +23,7 @@
 		7A1EE5CD2438AC2000D1E00B /* URLSessionFake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1EE5CB2438AC2000D1E00B /* URLSessionFake.swift */; };
 		7A1EE5CF2438AC9900D1E00B /* SeniorEstablishmentTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1EE5CE2438AC9900D1E00B /* SeniorEstablishmentTestCase.swift */; };
 		7A1EE5D12438ACEB00D1E00B /* senior.json in Resources */ = {isa = PBXBuildFile; fileRef = 7A1EE5D02438ACEB00D1E00B /* senior.json */; };
+		7A1EE5D3243CAD9500D1E00B /* TextFieldExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1EE5D2243CAD9500D1E00B /* TextFieldExtention.swift */; };
 		7AE01ED224321D5000FDADD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01ED124321D5000FDADD4 /* AppDelegate.swift */; };
 		7AE01ED424321D5000FDADD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AE01ED324321D5000FDADD4 /* SceneDelegate.swift */; };
 		7AE01ED924321D5000FDADD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AE01ED724321D5000FDADD4 /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 		7A1EE5CB2438AC2000D1E00B /* URLSessionFake.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionFake.swift; sourceTree = "<group>"; };
 		7A1EE5CE2438AC9900D1E00B /* SeniorEstablishmentTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeniorEstablishmentTestCase.swift; sourceTree = "<group>"; };
 		7A1EE5D02438ACEB00D1E00B /* senior.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = senior.json; sourceTree = "<group>"; };
+		7A1EE5D2243CAD9500D1E00B /* TextFieldExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExtention.swift; sourceTree = "<group>"; };
 		7AE01ECE24321D5000FDADD4 /* MediThink.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MediThink.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AE01ED124321D5000FDADD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AE01ED324321D5000FDADD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -235,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				7A1EE5A12434E5D700D1E00B /* StringExtention.swift */,
+				7A1EE5D2243CAD9500D1E00B /* TextFieldExtention.swift */,
 			);
 			path = Extention;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 				7AE01F112433C2FD00FDADD4 /* MedicationViewController.swift in Sources */,
 				7A1EE5AA2436328A00D1E00B /* SeniorEstablishmentService.swift in Sources */,
 				7AE01EED2432266500FDADD4 /* HomeViewController.swift in Sources */,
+				7A1EE5D3243CAD9500D1E00B /* TextFieldExtention.swift in Sources */,
 				7A1EE5A02434CDEC00D1E00B /* FrequencyTableViewCell.swift in Sources */,
 				7AE01F0F243398D300FDADD4 /* MedicationDataModel.swift in Sources */,
 			);

@@ -72,6 +72,8 @@ class SeniorEstablishmentViewController: UIViewController {
 
 }
 
+
+// Table View 
 extension SeniorEstablishmentViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -19,8 +19,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var currentDayLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    
-    
 
     override func viewWillAppear(_ animated: Bool) {
         setupDate()
@@ -49,7 +47,6 @@ class HomeViewController: UIViewController {
     
     // setup week in top of the screen, day + number
     private func setupDate() {
-        
         var index = 0
         //Number
         for outletButton in arrayNumberOutlet {

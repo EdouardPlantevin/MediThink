@@ -23,7 +23,7 @@ class AddMedicationViewController: UIViewController {
     
     
     //Outlet
-    @IBOutlet weak var NameMedicationTextField: UITextField!
+    @IBOutlet weak var nameMedicationTextField: UITextField!
     @IBOutlet weak var dayMedicationLabel: UITextView!
     @IBOutlet weak var hourTextField: UITextField!
     @IBOutlet weak var minuteTextField: UITextField!
@@ -33,11 +33,14 @@ class AddMedicationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Usefull with textFieldExtention, hide keyboard when return
+        nameMedicationTextField.delegate = self
+        
+        // Usefull for create DaysTableView
         tableView.isScrollEnabled = true
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(FrequencyTableViewCell.self, forCellReuseIdentifier: "Cell")
-        // Do any additional setup after loading the view.
     }
     
     
@@ -120,13 +123,13 @@ class AddMedicationViewController: UIViewController {
     //Button to add new Medication
     @IBAction func addNewMedicationBtn(_ sender: UIButton) {
         //Name
-        guard let name = NameMedicationTextField.text, name != "" else {
+        guard let name = nameMedicationTextField.text, name != "" else {
             //Show alert : No name
             presentAlert(view: self, message: "You don't put medication")
             return
         }
         //Days
-        if daysTakeMedication.count > 0 || isEveryDay == true {
+        if daysTakeMedication.count > 0 {
            
             //Hour
             guard let hour = hourTextField.text, hour.isInt == true else {
@@ -175,7 +178,7 @@ class AddMedicationViewController: UIViewController {
     
     //Resign keyboard
     private func dismissAllKeybaord() {
-        NameMedicationTextField.resignFirstResponder()
+        nameMedicationTextField.resignFirstResponder()
         hourTextField.resignFirstResponder()
         minuteTextField.resignFirstResponder()
     }

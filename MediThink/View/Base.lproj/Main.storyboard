@@ -546,10 +546,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add" id="f7c-E7-2XZ"/>
                     <connections>
-                        <outlet property="NameMedicationTextField" destination="pwK-Sx-Ag1" id="KjX-Ov-5PH"/>
                         <outlet property="dayMedicationLabel" destination="J6z-HO-G20" id="1xy-sG-jV6"/>
                         <outlet property="hourTextField" destination="MA0-xc-zsv" id="OHC-uv-cQw"/>
                         <outlet property="minuteTextField" destination="iFL-PF-f2m" id="8xi-dE-UAy"/>
+                        <outlet property="nameMedicationTextField" destination="pwK-Sx-Ag1" id="KjX-Ov-5PH"/>
                         <outlet property="quantityTextField" destination="nLY-sf-27B" id="lBQ-vM-f0V"/>
                     </connections>
                 </viewController>
